@@ -1,0 +1,29 @@
+.block {
+  display: block;
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.shadown {
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--transition-1);
+}
+
+.shadown:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.reset-list {
+  list-style: none;
+  padding: 0;
+}
+
+.show-notebook-plus {
+  display: var(--show-notebook-plus);
+}

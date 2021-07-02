@@ -1,0 +1,35 @@
+.holder-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder-field > .fields {
+  order: 1;
+}
+
+.holder-field > label {
+  order: 0;
+}
+
+.fields {
+  border: 0.5em solid var(--input-background);
+  border-right-color: inherit;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: var(--shadow);
+  padding: 0 0.25em;
+  transition: border-color var(--transition-1), box-shadow var(--transition-1);
+  width: 100%;
+}
+
+.fields:hover,
+.fields:focus {
+  border-left-color: inherit;
+  box-shadow: var(--shadow-hover);
+  outline: 0;
+}
+
+.fields:valid {
+  border-right-color: var(--success-color);
+  transition: border-color var(--transition-1);
+}

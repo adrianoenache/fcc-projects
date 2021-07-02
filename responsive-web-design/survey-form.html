@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: https://ogp.me/ns#">
+	<meta charset="UTF-8" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="INDEX, FOLLOW" />
+
+	<meta name="description"
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Survey Form." />
+	<meta name="keywords"
+		content="freeCodeCamp, HTML, HTML5, CSS, CSS3, Front-End, Responsive Web Design, Responsive, Web Design" />
+	<meta name="author" content="Adriano Enache - adrianoenache@hotmail.com" />
+
+	<title>freeCodeCamp Build a Survey Form</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
+	<link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+	<meta name="msapplication-TileColor" content="#000000" />
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+	<meta name="theme-color" content="#000000" />
+
+	<meta property="og:title" content="freeCodeCamp Build a Survey Form" />
+	<meta property="og:description"
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Survey Form." />
+	<meta property="og:type" content="blog" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:url" content="https://adrianoenache.dev.br/" />
+
+	<meta property="og:site_name" content="adrianoenache.dev.br" />
+	<meta property="article:published_time" content="2021-04-19T00:00:00+00:00" />
+	<meta property="article:author" content="Adriano Enache" />
+
+	<meta property="og:image"
+		content="https://adrianoenache.dev.br/fcc-projects/fcc-assets/images/og-images/og-image-fb-1200x630-fcc-build-a-survey-form.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@AdrianoEnache" />
+	<meta name="twitter:creator" content="@AdrianoEnache" />
+	<meta name="twitter:title" content="freeCodeCamp Build a Survey Form" />
+	<meta name="twitter:description"
+		content="This is a project exercise from freeCodeCamp to get the certification to Responsive Web Design, Build a Survey Form." />
+	<meta name="twitter:image"
+		content="https://adrianoenache.dev.br/fcc-projects/fcc-assets/images/og-images/og-image-twitter-300x150-fcc-build-a-survey-form.jpg" />
+	<meta name="twitter:url" content="https://adrianoenache.dev.br/" />
+
+	<!-- Critical CSS -->
+	<style>
+	</style>
+	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/survey-form.css" />
+</head>
+
+<body>
+	<main id="main">
+		<header>
+			<h1 id="title">
+				Survey form
+			</h1>
+			<p id="description">
+				This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
+					rel="noopener">freeCodeCamp</a> to get the certification to <a
+					href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
+					Design</a>, <a id="tribute-link"
+					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form"
+					target="_blank" rel="noopener">Build a Survey Form</a>.
+			</p>
+		</header>
+		<hr class="top">
+		<form class="custom-form" action="#" id="survey-form">
+			<fieldset>
+				<legend>Basic form itens (<span class="required">required</span>)</legend>
+				<div class="warpper-fields form-layout">
+					<div class="holder-field grid-area-name">
+						<input class="fields field-name" id="name" name="name" type="text" placeholder="Fill with your full name"
+							maxlength="140" minlength="3" spellcheck="true" required>
+						<label id="name-label" for="name" accesskey="n">Name</label>
+					</div>
+					<div class="holder-field grid-area-email">
+						<input class="fields field-email" id="email" name="email" type="email" placeholder="user@provider.com" maxlength="140"
+							required>
+						<label id="email-label" for="email" accesskey="e">E-mail</label>
+					</div>
+					<div class="holder-field grid-area-age">
+						<input class="fields field-age" id="number" name="age" type="number" placeholder="18+" min="18" max="120" required>
+						<label id="number-label" for="number" accesskey="Y">Your age</label>
+					</div>
+					<div class="holder-field grid-area-select">
+						<select class="fields" name="dropdown" id="dropdown" required>
+							<option value="">-</option>
+							<option value="BackEnd">Back-End</option>
+							<option value="FrontEnd">Front-End</option>
+							<option value="FullStack">FullStack</option>
+						</select>
+						<label for="dropdown" accesskey="s">Select one</label>
+					</div>
+					<div class="holder-field grid-area-comment">
+						<textarea class="fields" name="comments" id="comments"
+							placeholder="Fill with a minimum of 15 characters and a maximum of 280." minlength="15" maxlength="280"
+							spellcheck="true" required></textarea>
+						<label for="comments" accesskey="w">Write some comment about</label>
+					</div>
+					<div class="holder-field grid-area-list-1">
+						<label>Choose one kind of developer:</label>
+						<div class="list-of-fields">
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="backend" name="programer-type"
+									value="backend">
+								<label for="backend">Back End</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="frontend" name="programer-type"
+									value="frontend">
+								<label for="frontend">Front End</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-radio" type="radio" id="fullstack" name="programer-type"
+									value="fullstack">
+								<label for="fullstack">Full Stack</label>
+							</div>
+						</div>
+					</div>
+					<div class="holder-field grid-area-list-2">
+						<label>You like to coding in:</label>
+						<div class="list-of-fields">
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-1" name="code-1"
+									value="HTML">
+								<label for="code-1">HTML</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-2" name="code-2"
+									value="CSS">
+								<label for="code-2">CSS</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-3" name="code-3"
+									value="Javascript">
+								<label for="code-3">Javascript</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-4" name="code-4"
+									value="Java">
+								<label for="code-4">Java</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-5" name="code-5"
+									value="PHP">
+								<label for="code-5">PHP</label>
+							</div>
+							<div class="group">
+								<input class="fields-radio-checkbox field-checkbox" type="checkbox" id="code-6" name="code-6"
+									value="Python">
+								<label for="code-6">Python</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<div class="form-buttons">
+				<button class="reset-form" type="reset">fields</button>
+				<span class="holder-validate-submit">
+					<button class="validate-form"><span></span>fields</button>
+					<button class="submit-form" type="submit" id="submit">Submit</button>
+				</span>
+			</div>
+		</form>
+	</main>
+	<hr class="bottom">
+	<footer>
+		<h2>Follow me on:</h2>
+		<ul class="contact-links reset-list">
+			<li>
+				<a class="icon-link shadown" href="https://adrianoenache.dev.br" target="_blank" rel="noopener">Link to my
+					website adrianoenache.dev.br</a>
+			</li>
+			<li>
+				<a class="icon-link shadown" href="https://www.freecodecamp.org/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the freecodecamp</a>
+			</li>
+			<li>
+				<a class="icon-codepen shadown" href="https://codepen.io/adrianoenache" target="_blank" rel="noopener">Link to
+					my profile in the codepen</a>
+			</li>
+			<li>
+				<a class="icon-github shadown" href="https://github.com/adrianoenache" target="_blank" rel="noopener">Link to my
+					profile in the github</a>
+			</li>
+			<li>
+				<a class="icon-facebook shadown" href="https://www.facebook.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the facebook</a>
+			</li>
+			<li>
+				<a class="icon-linkedin2 shadown" href="https://www.linkedin.com/in/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the linkedin</a>
+			</li>
+			<li>
+				<a class="icon-reddit shadown" href="https://www.reddit.com/user/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the reddit</a>
+			</li>
+			<li>
+				<a class="icon-twitter shadown" href="https://twitter.com/AdrianoEnache" target="_blank" rel="noopener">Link to
+					my profile in the twitter</a>
+			</li>
+			<li>
+				<a class="icon-instagram shadown" href="https://www.instagram.com/adrianoenache" target="_blank"
+					rel="noopener">Link to my profile in the instagram</a>
+			</li>
+			<li>
+				<a class="icon-youtube shadown" href="https://www.youtube.com/channel/UC53UwM0XGPL0WdC5q3XExPA" target="_blank"
+					rel="noopener">Link to my profile in the youtube</a>
+			</li>
+		</ul>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
