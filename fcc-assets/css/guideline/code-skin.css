@@ -1,0 +1,122 @@
+.html code.gl,
+code.gl.html {
+  color: var(--gl-color-html-tag);
+}
+
+.html code.gl .property,
+code.gl.html .property {
+  color: var(--gl-color-html-property);
+}
+
+.html code.gl .value,
+code.gl.html .value {
+  color: var(--gl-color-html-property-value);
+}
+
+.html code.gl .comment,
+code.gl.html .comment {
+  color: var(--gl-color-html-comment);
+}
+
+.html code.gl .content,
+code.gl.html .content {
+  color: var(--gl-color-html-content);
+  cursor: pointer;
+  font-size: 0;
+  white-space: normal;
+}
+
+.html code.gl .content:hover,
+code.gl.html .content:hover {
+  font-size: 1em;
+}
+
+.html code.gl .content:after,
+code.gl.html .content:after {
+  content: "...";
+  font-size: 1rem;
+}
+
+.html code.gl .content:hover:after,
+code.gl.html .content:hover:after {
+  font-size: 0;
+}
+
+.css code.gl,
+code.gl.css {
+  color: var(--gl-color-css);
+}
+
+.css code.gl .selector,
+code.gl.css .selector {
+  color: var(--gl-color-css-class-selector);
+}
+
+.css code.gl .property,
+code.gl.css .property {
+  color: var(--gl-color-css-property);
+}
+
+.css code.gl .value,
+code.gl.css .value {
+  color: var(--gl-color-css-property-value);
+}
+
+.css code.gl .value.color::before,
+code.gl.css .value.color::before {
+  background-color: var(--gl-color-value);
+  border-radius: 25%;
+  border: solid 1px var(--gl-color-css);
+  box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.75em;
+  vertical-align: text-bottom;
+  width: 1em;
+}
+
+.css code.gl .string,
+code.gl.css .string {
+  color: var(--gl-color-css-string);
+}
+
+.css code.gl .function,
+code.gl.css .function {
+  color: var(--gl-color-css-function);
+}
+
+.css code.gl .math,
+code.gl.css .math {
+  color: var(--gl-color-css-math);
+}
+
+.css code.gl .var,
+code.gl.css .var {
+  color: var(--gl-color-css-custom-property);
+}
+
+.css code.gl .comment,
+code.gl.css .comment {
+  color: var(--gl-color-css-comment);
+}
+
+.css code.gl .state,
+code.gl.css .state {
+  color: var(--gl-color-css-behavior);
+}
+
+.css code.gl .pseudo,
+code.gl.css .pseudo {
+  color: var(--gl-color-css-pseudo-class);
+}
+
+.css code.gl .prefix,
+code.gl.css .prefix {
+  color: var(--gl-color-css-prefix);
+}
+
+.javascript code.gl,
+code.gl.javascript {
+  color: var(--gl-color-javascript);
+}

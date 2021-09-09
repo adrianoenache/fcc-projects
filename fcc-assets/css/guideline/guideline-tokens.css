@@ -1,0 +1,76 @@
+.gl {
+  /* Colors */
+  --gl-colors-01: black;
+  --gl-colors-02: white;
+  --gl-colors-03: lightgray;
+  --gl-colors-04: gray;
+  --gl-colors-05: mediumorchid;
+  --gl-colors-06: darkgoldenrod;
+  --gl-colors-07: darkorange;
+  --gl-colors-08: lightsalmon;
+  --gl-colors-09: yellow;
+  --gl-colors-10: lemonchiffon;
+  --gl-colors-11: chartreuse;
+  --gl-colors-12: lightgreen;
+  --gl-colors-13: darkseagreen;
+  --gl-colors-14: cornflowerblue;
+  --gl-colors-15: cyan;
+  --gl-color-highlight: 255, 0, 0;
+  /* Skin code default */
+  --gl-color-html-tag: var(--gl-colors-06);
+  --gl-color-html-property: var(--gl-colors-03);
+  --gl-color-html-property-value: var(--gl-colors-12);
+  --gl-color-html-comment: var(--gl-colors-04);
+  --gl-color-html-content: var(--gl-colors-02);
+  --gl-color-css: var(--gl-colors-03);
+  --gl-color-css-class-selector: var(--gl-colors-06);
+  --gl-color-css-property: var(--gl-colors-05);
+  --gl-color-css-property-value: var(--gl-colors-07);
+  --gl-color-css-string: var(--gl-colors-10);
+  --gl-color-css-function: var(--gl-colors-14);
+  --gl-color-css-math: var(--gl-colors-11);
+  --gl-color-css-custom-property: var(--gl-colors-15);
+  --gl-color-css-comment: var(--gl-colors-04);
+  --gl-color-css-behavior: var(--gl-colors-09);
+  --gl-color-css-pseudo-class: var(--gl-colors-08);
+  --gl-color-css-prefix: var(--gl-colors-08);
+  --gl-color-javascript: var(--gl-colors-14);
+  /* */
+  --gl-gutter: 10px;
+  --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+  --gl-transition: 0.3s ease;
+  --gl-text-color: var(--gl-colors-01);
+  --gl-background: var(--gl-colors-02);
+  --gl-background-stage-color: var(--gl-colors-03);
+  --gl-background-stage: linear-gradient(
+      45deg,
+      var(--gl-background-stage-color) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--gl-background-stage-color) 75%,
+      var(--gl-background-stage-color)
+    ),
+    linear-gradient(
+      45deg,
+      var(--gl-background-stage-color) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--gl-background-stage-color) 75%,
+      var(--gl-background-stage-color)
+    );
+  --gl-border-size: 5px;
+  --gl-border: solid var(--gl-border-size) var(--gl-colors-01);
+  --gl-menu-width: 300px;
+  /* Z-index */
+  --gl-behind: 1;
+  --gl-content: 5;
+  --gl-above: 10;
+  --gl-modal: 15;
+  /* Font*/
+  --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
+  --gl-code-font: 'Courier New', Courier, monospace;
+  --gl-font-size-small: 14px;
+  /* Rules */
+  box-sizing: border-box;
+  font-family: var(--gl-text-font);
+}

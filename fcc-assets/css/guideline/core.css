@@ -1,0 +1,171 @@
+.gl.wrapper-content {
+  background: var(--gl-background);
+  box-sizing: border-box;
+  box-shadow: var(--gl-shadow);
+  color: var(--gl-text-color);
+  margin-left: calc(((100vw - 100%) / 5) * -1);
+  margin-right: calc(((100vw - 100%) / 5) * -1);
+  padding: var(--gl-gutter);
+}
+
+.gl.holder-content {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gl.main-section:target .holder-content {
+  height: auto;
+  overflow: initial;
+  pointer-events: all;
+}
+
+.gl.main-section:target header.gl {
+  padding: calc(var(--gl-gutter) * 3) 0;
+}
+
+.gl.main-section:target {
+  padding-bottom: calc(var(--gl-gutter) * 3);
+}
+
+.gl.main-section:target header a.gl {
+  text-decoration: none;
+}
+
+.gl.main-section header h2.gl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.gl.column-content {
+  --column-quantity-desktop: var(--column-quantity-custom-desktop, var(--column-quantity-custom, 4));
+  --column-quantity-notebook: var(--column-quantity-custom-notebook, var(--column-quantity-custom, 3));
+  --column-quantity-tablet: var(--column-quantity-custom-tablet, var(--column-quantity-custom, 2));
+  --column-quantity-mobile: var(--column-quantity-custom-mobile, var(--column-quantity-custom, 1));
+  --column-quantity: var(--column-quantity-mobile);
+  /* Rules */
+  column-count: var(--column-quantity);
+  column-gap: 2em;
+  column-rule: solid 1px;
+  column-width: auto;
+}
+
+p.gl {
+  margin-top: 0;
+}
+
+p.gl:last-child {
+  margin-bottom: 0;
+}
+
+mark.gl {
+  background: var(--gl-colors-03);
+  border-radius: 0.25em;
+  display: inline-block;
+  padding: 0 0.25em;
+}
+
+.gl.main-title {
+  background-color: var(--gl-background);
+  border-bottom: var(--gl-border);
+  color: var(--gl-text-color);
+  font-size: 20px;
+  margin: 0;
+  padding: calc(var(--gl-gutter) * 2) var(--gl-gutter) var(--gl-gutter);
+}
+
+.gl-stage {
+  background-color: var(--gl-background);
+  background-image: var(--gl-background-stage);
+  background-position: 0 0, 5px 5px;
+  background-size: 10px 10px;
+}
+
+.gl-list-grid {
+  --min-template-column-size-desktop: var(--min-template-column-size-custom-desktop, var(--min-template-column-size-default));
+  --min-template-column-size-notebook: var(--min-template-column-size-custom-notebook, var(--min-template-column-size-default));
+  --min-template-column-size-tablet: var(--min-template-column-size-custom-tablet, var(--min-template-column-size-default));
+  --min-template-column-size-mobile: var(--min-template-column-size-custom-mobile, var(--min-template-column-size-default));
+  --min-template-column-size: var(--min-template-column-size-mobile);
+  --min-template-column-size-default: 300px;
+  /* Rules */
+  display: grid;
+  grid-column-gap: var(--gl-gutter);
+  grid-row-gap: var(--gl-gutter);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-template-column-size, 1fr), 1fr));
+}
+
+.gl-font-size-small {
+  font-size: var(--gl-font-size-small);
+}
+
+.gl-margin-bottom {
+  margin-bottom: calc(var(--gl-gutter) * 5);
+}
+
+a.gl,
+button.gl,
+.gl[contenteditable] {
+  outline: 0;
+}
+
+.gl.custom-scroll {
+  --scroll-thumb-background: var(--gl-colors-03);
+  --scroll-thumb-background-hover: var(--gl-colors-04);
+  --scroll-bar-background: var(--gl-colors-01);
+  --scroll-bar-width-firefox: thin;
+  --scroll-bar-width-chromium: 8px;
+  /* Rules */
+  /* -moz- Firefox custom scroll */
+  scrollbar-color: var(--scroll-thumb-background) var(--scroll-bar-background);
+  scrollbar-width: var(--scroll-bar-width-firefox);
+}
+
+/* -webkit- Edge, Chrome, Opera, Safari custom scroll */
+.gl.custom-scroll::-webkit-scrollbar {
+  background: var(--scroll-bar-background);
+  width: var(--scroll-bar-width-chromium);
+  height: var(--scroll-bar-width-chromium);
+}
+
+.gl.custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-background);
+  border: solid 1px var(--scroll-bar-background);
+}
+
+.gl.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-background-hover);
+}
+
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .gl.column-content {
+    --column-quantity: var(--column-quantity-tablet);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-tablet);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .gl.column-content {
+    --column-quantity: var(--column-quantity-notebook);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-notebook);
+  }
+}
+
+/* Desktop rules */
+/* Rule to work from desktop and above resolutions */
+@media only screen and (min-width: 1441px) {
+  .gl.column-content {
+    --column-quantity: var(--column-quantity-desktop);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-desktop);
+  }
+}
