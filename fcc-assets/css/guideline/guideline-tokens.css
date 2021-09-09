@@ -35,10 +35,7 @@
   --gl-color-css-pseudo-class: var(--gl-colors-08);
   --gl-color-css-prefix: var(--gl-colors-08);
   --gl-color-javascript: var(--gl-colors-14);
-  /* */
-  --gl-gutter: 10px;
-  --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
-  --gl-transition: 0.3s ease;
+  /* General configuration tokens */
   --gl-text-color: var(--gl-colors-01);
   --gl-background: var(--gl-colors-02);
   --gl-background-stage-color: var(--gl-colors-03);
@@ -58,18 +55,19 @@
       var(--gl-background-stage-color) 75%,
       var(--gl-background-stage-color)
     );
-  --gl-border-size: 5px;
+  --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
+  --gl-code-font: 'Courier New', Courier, monospace;
+  --gl-font-size-small: 14px;
   --gl-border: solid var(--gl-border-size) var(--gl-colors-01);
+  --gl-gutter: 10px;
+  --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
+  --gl-transition: 0.3s ease;
+  --gl-border-size: 5px;
   --gl-menu-width: 300px;
-  /* Z-index */
   --gl-behind: 1;
   --gl-content: 5;
   --gl-above: 10;
   --gl-modal: 15;
-  /* Font*/
-  --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
-  --gl-code-font: 'Courier New', Courier, monospace;
-  --gl-font-size-small: 14px;
   /* Rules */
   box-sizing: border-box;
   font-family: var(--gl-text-font);
