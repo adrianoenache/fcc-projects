@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* ##### Root configuration ##### */
+:root {
+	/* Design Tokens level 1 - Primal values */
+	/*
+		color-pool = --cp
+	*/
+  --cp-1: #000000;
+	--cp-1-rgb: 0, 0, 0;
+	--cp-2: #ffffff;
+	--cp-2-rgb: 255, 255, 255;
+	--cp-3: #142a69;
+	--cp-3-rgb: 20, 42, 105;
+	--cp-4: #184890;
+	--cp-4-rgb: 24, 72, 144;
+	--cp-5: #4878a8;
+	--cp-5-rgb: 72, 120, 168;
+	--cp-6: #6090c0;
+	--cp-6-rgb: 96, 144, 192;
+	--cp-7: #c8d9e9;
+	--cp-7-rgb: 200, 217, 233;
+	--cp-8: #855f00;
+	--cp-8-rgb: 133, 95, 0;
+	--cp-9: #d19600;
+	--cp-9-rgb: 209, 150, 0;
+	--cp-10: #f3b518;
+	--cp-10-rgb: 243, 181, 24;
+	--cp-11: #222222;
+	--cp-11-rgb: 34, 34, 34;
+	--cp-12: #6e6e6e;
+	--cp-12-rgb: 110, 110, 110;
+	--cp-13: #bababa;
+	--cp-13-rgb: 186, 186, 186;
+	--cp-14: #a14040;
+	--cp-14-rgb: 161, 64, 64;
+	--cp-15: #20a145;
+	--cp-15-rgb: 32, 161, 69;
+	/*
+		font-family = --ff
+	*/
+	--ff-1: Verdana, sans-serif;
+	--ff-2: Arial, sans-serif;
+	/*
+		text-size = --ts
+	*/
+	--ts-0: 0;
+	--ts-s-xxx: 10px;
+	--ts-s-xx: 12px;
+	--ts-s-x: 14px;
+	--ts-s: 16px;
+	--ts-m-s: 18px;
+	--ts-m: 22px;
+	--ts-m-l: 26px;
+	--ts-l: 30px;
+	--ts-l-x: 38px;
+	--ts-l-xx: 46px;
+	--ts-l-xxx: 54px;
+	/*
+		line-height = --lh
+	*/
+	--lh-s-x: .75em;
+	--lh-s: 1em;
+	--lh-m: 1.25em;
+	--lh-m-x: 1.5em;
+	--lh-m-xx: 1.75em;
+	--lh-l: 2em;
+	--lh-l-x: 2.5em;
+	/*
+		spacing = --sp
+		spacing-multiplier = --sp-mp
+	*/
+	--sp-0: 0;
+	--sp-a: auto;
+	--sp-mp: 2;
+	--sp-s-xxx: 2px;
+	--sp-s-xx: calc(var(--sp-s-xxx) * var(--sp-mp));
+	--sp-s-x: calc(var(--sp-s-xx) * var(--sp-mp));
+	--sp-s: calc(var(--sp-s-x) * var(--sp-mp));
+	--sp-m: calc(var(--sp-s) * var(--sp-mp));
+	--sp-l: calc(var(--sp-m) * var(--sp-mp));
+	--sp-l-x: calc(var(--sp-l) * var(--sp-mp));
+	--sp-l-xx: calc(var(--sp-l-x) * var(--sp-mp));
+	--sp-l-xxx: calc(var(--sp-l-xx) * var(--sp-mp));
+	/*
+		opacity = --op
+	*/
+	--op-0: 0;
+	--op-s-xx: .05;
+	--op-s-x: .15;
+	--op-s: .25;
+	--op-m-s: .35;
+	--op-m: .5;
+	--op-m-l: .65;
+	--op-l: .75;
+	--op-l-x: .85;
+	--op-l-xx: .95;
+	--op-1: 1;
+	/*
+		grid
+	*/
+	/* z-level */
+	--background: 1;
+	--behind-content: 5;
+	--content: 10;
+	--over-content: 15;
+	--header: 20;
+	--stick: 25;
+	--modal: 30;
+	/* Design Tokens level 2 - Theme configuration */
+	/*
+		base-text-font
+	*/
+	--btf: var(--ff-1);
+	/*
+		base-text-color
+	*/
+	--btc: var(--cp-1);
+	/*
+		base-text-size
+	*/
+	--bts: var(--ts-s);
+	/*
+		base-line-height
+	*/
+	--blh: var(--lh-m-x);
+	/*
+		base-background-color
+	*/
+	--bbc: var(--cp-2);
+	/* Rules */
+	background-color: var(--bbc);
+	font-size: var(--bts);
+}
+
+/* ##### Core tools ##### */
+
+:not(html) {
+	/*
+		Color function
+
+		Private variables "--p"
+			rgb-fallback		--p-rgb-f
+
+		RGB color function variable
+			rgb							--rgb
+
+		Access point variables
+			set-rgb					--s-rgb
+			set-rgb-opacity	--s-rgb-op
+	*/
+	--p-rgb-f: 0, 0, 0;
+	--rgb: rgba(var(--s-rgb, var(--p-rgb-f)), var(--s-rgb-op, 1));
+	/*
+		Responsive background-color propeemrty
+
+		Private variables "--p"
+			default-background-color	--p-d-bgc
+			background-color-desktop	--p-bgc-d
+			background-color-notebook	--p-bgc-n
+			background-color-tablet		--p-bgc-t
+			background-color-mobile		--p-bgc-m
+			background-color					--p-bgc
+
+		Access point variables
+			default-background-color	--d-bgc
+			background-color-desktop	--bgc-d
+			background-color-notebook	--bgc-n
+			background-color-tablet		--bgc-t
+			background-color-mobile		--bgc-m
+			background-color					--bgc
+
+			Default value pointing to
+			"--d-bgc" with a initial value.
+	*/
+	--p-d-bgc: var(--d-bgc);
+	--p-bgc-d: var(--bgc-d, var(--bgc, var(--p-bgc-n)));
+	--p-bgc-n: var(--bgc-n, var(--bgc, var(--p-bgc-t)));
+	--p-bgc-t: var(--bgc-t, var(--bgc, var(--p-bgc-m)));
+	--p-bgc-m: var(--bgc-m, var(--bgc, var(--p-d-bgc)));
+	--p-bgc: var(--p-bgc-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-bgc: initial;
+	--bgc: initial;
+	--bgc-m: initial;
+	--bgc-t: initial;
+	--bgc-n: initial;
+	--bgc-d: initial;
+	/*
+		Initialize value
+	*/
+	background-color: var(--p-bgc);
+	/*
+		Responsive color property
+
+		Private variables "--p"
+			default-color		--p-d-cl
+			color-desktop		--p-cl-d
+			color-notebook	--p-cl-n
+			color-tablet		--p-cl-t
+			color-mobile		--p-cl-m
+			color						--p-cl
+
+		Access point variables
+			default-color		--d-cl
+			color-desktop		--cl-d
+			color-notebook	--cl-n
+			color-tablet		--cl-t
+			color-mobile		--cl-m
+			color						--cl
+
+			Default value pointing to
+			desing token "--btc" with
+			a fallback value.
+	*/
+	--p-d-cl: var(--d-cl, var(--btc, black));
+	--p-cl-d: var(--cl-d, var(--cl, var(--p-cl-n)));
+	--p-cl-n: var(--cl-n, var(--cl, var(--p-cl-t)));
+	--p-cl-t: var(--cl-t, var(--cl, var(--p-cl-m)));
+	--p-cl-m: var(--cl-m, var(--cl, var(--p-d-cl)));
+	--p-cl: var(--p-cl-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-cl: initial;
+	--cl: initial;
+	--cl-m: initial;
+	--cl-t: initial;
+	--cl-n: initial;
+	--cl-d: initial;
+	/*
+		Initialize value
+	*/
+	color: var(--p-cl);
+	/*
+		Responsive font-size property
+
+		Private variables "--p"
+			default-font-size		--p-d-fs
+			font-size-desktop		--p-fs-d
+			font-size-notebook	--p-fs-n
+			font-size-tablet		--p-fs-t
+			font-size-mobile		--p-fs-m
+			font-size						--p-fs
+
+		Access point variables
+			default-font-size		--d-fs
+			font-size-desktop		--fs-d
+			font-size-notebook	--fs-n
+			font-size-tablet		--fs-t
+			font-size-mobile		--fs-m
+			font-size						--fs
+
+			Default value pointing to
+			desing token "--bts" with
+			a fallback value.
+	*/
+	--p-d-fs: var(--d-fs, var(--bts, 16px));
+	--p-fs-d: var(--fs-d, var(--fs, var(--p-fs-n)));
+	--p-fs-n: var(--fs-n, var(--fs, var(--p-fs-t)));
+	--p-fs-t: var(--fs-t, var(--fs, var(--p-fs-m)));
+	--p-fs-m: var(--fs-m, var(--fs, var(--p-d-fs)));
+	--p-fs: var(--p-fs-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-fs: initial;
+	--fs: initial;
+	--fs-m: initial;
+	--fs-t: initial;
+	--fs-n: initial;
+	--fs-d: initial;
+	/*
+		Initialize value
+	*/
+	font-size: var(--p-fs);
+	/*
+		Responsive margin-top property
+
+		Private variables "--p"
+			default-margin-top	--p-d-mt
+			margin-top-desktop	--p-mt-d
+			margin-top-notebook	--p-mt-n
+			margin-top-tablet		--p-mt-t
+			margin-top-mobile		--p-mt-m
+			margin-top					--p-mt
+
+		Access point variables
+			default-margin-top	--d-mt
+			margin-top-desktop	--mt-d
+			margin-top-notebook	--mt-n
+			margin-top-tablet		--mt-t
+			margin-top-mobile		--mt-m
+			margin-top					--mt
+	*/
+	--p-d-mt: var(--d-mt);
+	--p-mt-d: var(--mt-d, var(--mt, var(--p-mt-n)));
+	--p-mt-n: var(--mt-n, var(--mt, var(--p-mt-t)));
+	--p-mt-t: var(--mt-t, var(--mt, var(--p-mt-m)));
+	--p-mt-m: var(--mt-m, var(--mt, var(--p-d-mt)));
+	--p-mt: var(--p-mt-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-mt: initial;
+	--mt: initial;
+	--mt-m: initial;
+	--mt-t: initial;
+	--mt-n: initial;
+	--mt-d: initial;
+	/*
+		Initialize value
+	*/
+	margin-top: var(--p-mt);
+	/*
+		Responsive margin-right property
+
+		Private variables "--p"
+			default-margin-right	--p-d-mr
+			margin-right-desktop	--p-mr-d
+			margin-right-notebook	--p-mr-n
+			margin-right-tablet		--p-mr-t
+			margin-right-mobile		--p-mr-m
+			margin-right					--p-mr
+
+		Access point variables
+			default-margin-right	--d-mr
+			margin-right-desktop	--mr-d
+			margin-right-notebook	--mr-n
+			margin-right-tablet		--mr-t
+			margin-right-mobile		--mr-m
+			margin-right					--mr
+	*/
+	--p-d-mr: var(--d-mr);
+	--p-mr-d: var(--mr-d, var(--mr, var(--p-mr-n)));
+	--p-mr-n: var(--mr-n, var(--mr, var(--p-mr-t)));
+	--p-mr-t: var(--mr-t, var(--mr, var(--p-mr-m)));
+	--p-mr-m: var(--mr-m, var(--mr, var(--p-d-mr)));
+	--p-mr: var(--p-mr-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-mr: initial;
+	--mr: initial;
+	--mr-m: initial;
+	--mr-t: initial;
+	--mr-n: initial;
+	--mr-d: initial;
+	/*
+		Initialize value
+	*/
+	margin-right: var(--p-mr);
+	/*
+		Responsive margin-bottom property
+
+		Private variables "--p"
+			default-margin-bottom		--p-d-mb
+			margin-bottom-desktop		--p-mb-d
+			margin-bottom-notebook	--p-mb-n
+			margin-bottom-tablet		--p-mb-t
+			margin-bottom-mobile		--p-mb-m
+			margin-bottom						--p-mb
+
+		Access point variables
+			default-margin-bottom		--d-mb
+			margin-bottom-desktop		--mb-d
+			margin-bottom-notebook	--mb-n
+			margin-bottom-tablet		--mb-t
+			margin-bottom-mobile		--mb-m
+			margin-bottom						--mb
+	*/
+	--p-d-mb: var(--d-mb);
+	--p-mb-d: var(--mb-d, var(--mb, var(--p-mb-n)));
+	--p-mb-n: var(--mb-n, var(--mb, var(--p-mb-t)));
+	--p-mb-t: var(--mb-t, var(--mb, var(--p-mb-m)));
+	--p-mb-m: var(--mb-m, var(--mb, var(--p-d-mb)));
+	--p-mb: var(--p-mb-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-mb: initial;
+	--mb: initial;
+	--mb-m: initial;
+	--mb-t: initial;
+	--mb-n: initial;
+	--mb-d: initial;
+	/*
+		Initialize value
+	*/
+	margin-bottom: var(--p-mb);
+	/*
+		Responsive margin-left property
+
+		Private variables "--p"
+			default-margin-left		--p-d-ml
+			margin-left-desktop		--p-ml-d
+			margin-left-notebook	--p-ml-n
+			margin-left-tablet		--p-ml-t
+			margin-left-mobile		--p-ml-m
+			margin-left						--p-ml
+
+		Access point variables
+			default-margin-left		--d-ml
+			margin-left-desktop		--ml-d
+			margin-left-notebook	--ml-n
+			margin-left-tablet		--ml-t
+			margin-left-mobile		--ml-m
+			margin-left						--ml
+	*/
+	--p-d-ml: var(--d-ml);
+	--p-ml-d: var(--ml-d, var(--ml, var(--p-ml-n)));
+	--p-ml-n: var(--ml-n, var(--ml, var(--p-ml-t)));
+	--p-ml-t: var(--ml-t, var(--ml, var(--p-ml-m)));
+	--p-ml-m: var(--ml-m, var(--ml, var(--p-d-ml)));
+	--p-ml: var(--p-ml-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-ml: initial;
+	--ml: initial;
+	--ml-m: initial;
+	--ml-t: initial;
+	--ml-n: initial;
+	--ml-d: initial;
+	/*
+		Initialize value
+	*/
+	margin-left: var(--p-ml);
+	/*
+		Responsive padding-top property
+
+		Private variables "--p"
+			default-padding-top	--p-d-pt
+			padding-top-desktop	--p-pt-d
+			padding-top-notebook	--p-pt-n
+			padding-top-tablet		--p-pt-t
+			padding-top-mobile		--p-pt-m
+			padding-top					--p-pt
+
+		Access point variables
+			default-padding-top	--d-pt
+			padding-top-desktop	--pt-d
+			padding-top-notebook	--pt-n
+			padding-top-tablet		--pt-t
+			padding-top-mobile		--pt-m
+			padding-top					--pt
+	*/
+	--p-d-pt: var(--d-pt);
+	--p-pt-d: var(--pt-d, var(--pt, var(--p-pt-n)));
+	--p-pt-n: var(--pt-n, var(--pt, var(--p-pt-t)));
+	--p-pt-t: var(--pt-t, var(--pt, var(--p-pt-m)));
+	--p-pt-m: var(--pt-m, var(--pt, var(--p-d-pt)));
+	--p-pt: var(--p-pt-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-pt: initial;
+	--pt: initial;
+	--pt-m: initial;
+	--pt-t: initial;
+	--pt-n: initial;
+	--pt-d: initial;
+	/*
+		Initialize value
+	*/
+	padding-top: var(--p-pt);
+	/*
+		Responsive padding-right property
+
+		Private variables "--p"
+			default-padding-right	--p-d-pr
+			padding-right-desktop	--p-pr-d
+			padding-right-notebook	--p-pr-n
+			padding-right-tablet		--p-pr-t
+			padding-right-mobile		--p-pr-m
+			padding-right					--p-pr
+
+		Access point variables
+			default-padding-right	--d-pr
+			padding-right-desktop	--pr-d
+			padding-right-notebook	--pr-n
+			padding-right-tablet		--pr-t
+			padding-right-mobile		--pr-m
+			padding-right					--pr
+	*/
+	--p-d-pr: var(--d-pr);
+	--p-pr-d: var(--pr-d, var(--pr, var(--p-pr-n)));
+	--p-pr-n: var(--pr-n, var(--pr, var(--p-pr-t)));
+	--p-pr-t: var(--pr-t, var(--pr, var(--p-pr-m)));
+	--p-pr-m: var(--pr-m, var(--pr, var(--p-d-pr)));
+	--p-pr: var(--p-pr-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-pr: initial;
+	--pr: initial;
+	--pr-m: initial;
+	--pr-t: initial;
+	--pr-n: initial;
+	--pr-d: initial;
+	/*
+		Initialize value
+	*/
+	padding-right: var(--p-pr);
+	/*
+		Responsive padding-bottom property
+
+		Private variables "--p"
+			default-padding-bottom		--p-d-pb
+			padding-bottom-desktop		--p-pb-d
+			padding-bottom-notebook	--p-pb-n
+			padding-bottom-tablet		--p-pb-t
+			padding-bottom-mobile		--p-pb-m
+			padding-bottom						--p-pb
+
+		Access point variables
+			default-padding-bottom		--d-pb
+			padding-bottom-desktop		--pb-d
+			padding-bottom-notebook	--pb-n
+			padding-bottom-tablet		--pb-t
+			padding-bottom-mobile		--pb-m
+			padding-bottom						--pb
+	*/
+	--p-d-pb: var(--d-pb);
+	--p-pb-d: var(--pb-d, var(--pb, var(--p-pb-n)));
+	--p-pb-n: var(--pb-n, var(--pb, var(--p-pb-t)));
+	--p-pb-t: var(--pb-t, var(--pb, var(--p-pb-m)));
+	--p-pb-m: var(--pb-m, var(--pb, var(--p-d-pb)));
+	--p-pb: var(--p-pb-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-pb: initial;
+	--pb: initial;
+	--pb-m: initial;
+	--pb-t: initial;
+	--pb-n: initial;
+	--pb-d: initial;
+	/*
+		Initialize value
+	*/
+	padding-bottom: var(--p-pb);
+	/*
+		Responsive padding-left property
+
+		Private variables "--p"
+			default-padding-left	--p-d-pl
+			padding-left-desktop	--p-pl-d
+			padding-left-notebook	--p-pl-n
+			padding-left-tablet		--p-pl-t
+			padding-left-mobile		--p-pl-m
+			padding-left					--p-pl
+
+		Access point variables
+			default-padding-left	--d-pl
+			padding-left-desktop	--pl-d
+			padding-left-notebook	--pl-n
+			padding-left-tablet		--pl-t
+			padding-left-mobile		--pl-m
+			padding-left					--pl
+	*/
+	--p-d-pl: var(--d-pl);
+	--p-pl-d: var(--pl-d, var(--pl, var(--p-pl-n)));
+	--p-pl-n: var(--pl-n, var(--pl, var(--p-pl-t)));
+	--p-pl-t: var(--pl-t, var(--pl, var(--p-pl-m)));
+	--p-pl-m: var(--pl-m, var(--pl, var(--p-d-pl)));
+	--p-pl: var(--p-pl-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-pl: initial;
+	--pl: initial;
+	--pl-m: initial;
+	--pl-t: initial;
+	--pl-n: initial;
+	--pl-d: initial;
+	/*
+		Initialize value
+	*/
+	padding-left: var(--p-pl);
+	/*
+	Spacing functions
+
+	Private variables
+		spacing-fallback										--p-sp-f
+		spacing-default-margin							--p-sp-d-mg
+		spacing-default-padding							--p-sp-d-pd
+		spacing-default-xy									--p-sp-d-xy
+		spacing-default-em									--p-sp-d-em
+
+	Private common functions variables
+		spacing-default-scale-calc-margin		--p-sp-d-sc-mg
+		spacing-default-scale-calc-padding	--p-sp-d-sc-pd
+		spacing-default-scale-calc-em				--p-sp-d-sc-em
+
+	Access point variables
+		spacing-margin	--sp-mg
+		spacing-padding	--sp-pd
+		spacing-auto		--sp-auto
+
+	Spacing functions variables
+		spacing-smash-margin		--sp-smash-mg
+		spacing-squeeze-margin	--sp-squeeze-mg
+		spacing-arround-margin	--sp-arround-mg
+		spacing-x-margin				--sp-x-mg
+		spacing-y-margin				--sp-y-mg
+		spacing-smash-padding		--sp-smash-pd
+		spacing-squeeze-padding	--sp-squeeze-pd
+		spacing-arround-padding	--sp-arround-pd
+		spacing-x-padding				--sp-x-pd
+		spacing-y-padding				--sp-y-pd
+		spacing-smash-em				--sp-smash-em
+		spacing-squeeze-em			--sp-squeeze-em
+		spacing-arround-em			--sp-arround-em
+		spacing-x-em						--sp-x-em
+		spacing-y-em						--sp-y-em
+
+		Default value pointing to
+		desing token "--sp-s-xxx" with
+		a fallback value.
+	*/
+	/*
+		Private variables
+	*/
+	--p-sp-f: var(--sp-s-xxx, .75em);
+	--p-sp-d-mg: var(--sp-mg, var(--p-sp-f));
+	--p-sp-d-pd: var(--sp-pd, var(--p-sp-f));
+	--p-sp-d-xy: var(--sp-auto, 0);
+	--p-sp-d-em: 1em;
+	/*
+		Private common functions variables
+	*/
+	--p-sp-d-sc-mg: calc(var(--p-sp-d-mg) * var(--sp-mp));
+	--p-sp-d-sc-pd: calc(var(--p-sp-d-pd) * var(--sp-mp));
+	--p-sp-d-sc-em: calc(var(--p-sp-d-em) * var(--sp-mp));
+	/*
+		Margin functions variables
+		to use with spacing design tokens.
+	*/
+	--sp-smash-mg: var(--p-sp-d-mg) var(--p-sp-d-sc-mg);
+	--sp-squeeze-mg: var(--p-sp-d-sc-mg) var(--p-sp-d-mg);
+	--sp-arround-mg: var(--p-sp-d-mg);
+	--sp-x-mg: var(--p-sp-d-xy) var(--p-sp-d-mg);
+	--sp-y-mg: var(--p-sp-d-mg) var(--p-sp-d-xy);
+	/*
+		Padding functions variables
+		to use with spacing design tokens.
+	*/
+	--sp-smash-pd: var(--p-sp-d-pd) var(--p-sp-d-sc-pd);
+	--sp-squeeze-pd: var(--p-sp-d-sc-pd) var(--p-sp-d-pd);
+	--sp-arround-pd: var(--p-sp-d-pd);
+	--sp-x-pd: var(--p-sp-d-xy) var(--p-sp-d-pd);
+	--sp-y-pd: var(--p-sp-d-pd) var(--p-sp-d-xy);
+	/*
+		Functions variables for margin or
+		padding that will respond to current
+		font-size defined in the element.
+	*/
+	--sp-smash-em: var(--p-sp-d-em) var(--p-sp-d-sc-em);
+	--sp-squeeze-em: var(--p-sp-d-sc-em) var(--p-sp-d-em);
+	--sp-arround-em: var(--p-sp-d-em);
+	--sp-x-em: var(--p-sp-d-xy) var(--p-sp-d-em);
+	--sp-y-em: var(--p-sp-d-em) var(--p-sp-d-xy);
+	/*
+		Responsive margin property
+
+		Private variables "--p"
+			default-margin-shorthand	--p-d-ms
+			margin-shorthand-desktop	--p-ms-d
+			margin-shorthand-notebook	--p-ms-n
+			margin-shorthand-tablet		--p-ms-t
+			margin-shorthand-mobile		--p-ms-m
+			margin-shorthand					--p-ms
+
+		Access point variables
+			default-margin-shorthand	--d-ms
+			margin-shorthand-desktop	--ms-d
+			margin-shorthand-notebook	--ms-n
+			margin-shorthand-tablet		--ms-t
+			margin-shorthand-mobile		--ms-m
+			margin-shorthand					--ms
+
+			Default value pointing to
+			a fallback value.
+	*/
+	--p-d-ms: var(--d-ms, .75em auto);
+	--p-ms-d: var(--ms-d, var(--ms, var(--p-ms-n)));
+	--p-ms-n: var(--ms-n, var(--ms, var(--p-ms-t)));
+	--p-ms-t: var(--ms-t, var(--ms, var(--p-ms-m)));
+	--p-ms-m: var(--ms-m, var(--ms, var(--p-d-ms)));
+	--p-ms: var(--p-ms-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-ms: initial;
+	--ms: initial;
+	--ms-m: initial;
+	--ms-t: initial;
+	--ms-n: initial;
+	--ms-d: initial;
+	/*
+		Value is initialized in the class .ms
+	*/
+	/*
+		Responsive padding property
+
+		Private variables "--p"
+			default-padding-shorthand		--p-d-ps
+			padding-shorthand-desktop		--p-ps-d
+			padding-shorthand-notebook	--p-ps-n
+			padding-shorthand-tablet		--p-ps-t
+			padding-shorthand-mobile		--p-ps-m
+			padding-shorthand						--p-ps
+
+		Access point variables
+			default-padding-shorthand		--d-ps
+			padding-shorthand-desktop		--ps-d
+			padding-shorthand-notebook	--ps-n
+			padding-shorthand-tablet		--ps-t
+			padding-shorthand-mobile		--ps-m
+			padding-shorthand						--ps
+
+			Default value pointing to
+			a fallback value.
+	*/
+	--p-d-ps: var(--d-ps, 0 0);
+	--p-ps-d: var(--ps-d, var(--ps, var(--p-ps-n)));
+	--p-ps-n: var(--ps-n, var(--ps, var(--p-ps-t)));
+	--p-ps-t: var(--ps-t, var(--ps, var(--p-ps-m)));
+	--p-ps-m: var(--ps-m, var(--ps, var(--p-d-ps)));
+	--p-ps: var(--p-ps-m);
+	/*
+		This resets the custom values,
+		in case the tool is used again
+		in child elements.
+	*/
+	--d-ps: initial;
+	--ps: initial;
+	--ps-m: initial;
+	--ps-t: initial;
+	--ps-n: initial;
+	--ps-d: initial;
+	/*
+		Value is initialized in the class .ps
+	*/
+	/*
+	----
+	*/
+	--transition:
+		background-color .25s ease,
+		color .25s ease;
+	transition: var(--transition);
+	/*
+	----
+	*/
+	font-family: var(--btf);
+	line-height: var(--blh);
+	box-sizing: border-box;
+}
+
+.ms {
+	/*
+		Initialize value
+	*/
+	margin: var(--p-ms);
+}
+
+.ps {
+	/*
+		Initialize value
+	*/
+	padding: var(--p-ps);
+}
+
+/* ##### Media queries ##### */
+
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  :not(html) {
+		--p-cl: var(--p-cl-t);
+		--p-bgc: var(--p-bgc-t);
+		--p-fs: var(--p-fs-t);
+		--p-ms: var(--p-ms-t);
+		--p-mt: var(--p-mt-t);
+		--p-mr: var(--p-mr-t);
+		--p-mb: var(--p-mb-t);
+		--p-ml: var(--p-ml-t);
+		--p-ps: var(--p-ps-t);
+		--p-pt: var(--p-pt-t);
+		--p-pr: var(--p-pr-t);
+		--p-pb: var(--p-pb-t);
+		--p-pl: var(--p-pl-t);
+  }
+}
+
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  :not(html) {
+		--p-cl: var(--p-cl-n);
+		--p-bgc: var(--p-bgc-n);
+		--p-fs: var(--p-fs-n);
+		--p-ms: var(--p-ms-n);
+		--p-mt: var(--p-mt-n);
+		--p-mr: var(--p-mr-n);
+		--p-mb: var(--p-mb-n);
+		--p-ml: var(--p-ml-n);
+		--p-ps: var(--p-ps-n);
+		--p-pt: var(--p-pt-n);
+		--p-pr: var(--p-pr-n);
+		--p-pb: var(--p-pb-n);
+		--p-pl: var(--p-pl-n);
+  }
+}
+
+/* Rule to work from desktop and above resolutions */
+@media only screen and (min-width: 1441px) {
+  :not(html) {
+		--p-cl: var(--p-cl-d);
+		--p-bgc: var(--p-bgc-d);
+		--p-fs: var(--p-fs-d);
+		--p-ms: var(--p-ms-d);
+		--p-mt: var(--p-mt-d);
+		--p-mr: var(--p-mr-d);
+		--p-mb: var(--p-mb-d);
+		--p-ml: var(--p-ml-d);
+		--p-ps: var(--p-ps-d);
+		--p-pt: var(--p-pt-d);
+		--p-pr: var(--p-pr-d);
+		--p-pb: var(--p-pb-d);
+		--p-pl: var(--p-pl-d);
+  }
+}
+
+/*  */
+
+body {
+	--d-m: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	--title-tf: var(--ff-2);
+	--title-mg: var(--lh-m);
+	--btf: var(--title-tf);
+	--blh: var(--lh-m);
+	--d-mb: var(--title-mg);
+}
+
+h1 {
+	--d-fs: var(--ts-l-xx);
+	--fs-n: var(--ts-l-xxx);
+}
+
+h2 {
+	--d-fs: var(--ts-l-x);
+	--fs-n: var(--ts-l-xx);
+}
+
+h3 {
+	--d-fs: var(--ts-l);
+	--fs-n: var(--ts-l-x);
+}
+
+h4 {
+	--d-fs: var(--ts-m-l);
+	--fs-n: var(--ts-l);
+}
+
+h5 {
+	--d-fs: var(--ts-m);
+	--fs-n: var(--ts-m-l);
+}
+
+h6 {
+	--d-fs: var(--ts-m-s);
+	--fs-n: var(--ts-m);
+}
+
+p {
+	--p-mg: var(--lh-s);
+	--d-mt: var(--p-mg);
+}
+
+li {
+	--li-mg: var(--lh-s);
+	--d-mt: var(--li-mg);
+}
+
+/* Form */
+
+button, input, select {
+	--blh: var(--lh-s);
+}
+
+textarea {
+	--blh: var(--lh-m-x);
+}
+
+button, input, select, textarea {
+	--base-form-btf: var(--btf);
+	--base-form-bgc: var(--cp-7);
+  --d-bgc: var(--base-form-bgc);
+	font-family: var(--base-form-btf);
+}
+
+/*  */
+
+button:hover {
+	--d-bgc: var(--cp-10);
+}
+
+h1 {
+	--s-rgb-op: .25;
+	--s-rgb: 255, 0, 0;
+	--bgc-m: var(--rgb);
+	--sp-mg: 100px;
+	--d-ms: var(--sp-smash-mg);
+	/*  */
+	--sp-pd: 50px;
+	--ps-m: var(--sp-smash-pd);
+}
+
+/*  */
+
+  </style>
+</head>
+<body>
+  <h1 class="ms ps">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+  <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
+  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+  <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit</h5>
+  <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit</h6>
+  <p style="--d-bgc: cyan; --d-cl: var(--cp-6); --cl-n: var(--cp-2);">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ea dolorem delectus blanditiis vitae quod sunt inventore! Non quisquam eveniet ad. Non modi itaque rerum dolores. Dignissimos facilis suscipit perferendis?
+  </p>
+	<ul>
+		<li>Lorem</li>
+		<li>Lorem</li>
+		<li>Lorem</li>
+		<li>Lorem</li>
+		<li>Lorem</li>
+	</ul>
+	<table>
+		<caption>The Beatles</caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Instrument</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Name</th>
+				<th>Instrument</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td>John Lennon</td>
+				<td>Rhythm Guitar</td>
+			</tr>
+			<tr>
+				<td>Paul McCartney</td>
+				<td>Bass</td>
+			</tr>
+			<tr>
+				<td>George Harrison</td>
+				<td>Lead Guitar</td>
+			</tr>
+			<tr>
+				<td>Ringo Starr</td>
+				<td>Drums</td>
+			</tr>
+		</tbody>
+	</table>
+  <input type="text" placeholder="test">
+  <button type="button">button</button>
+  <select name="" id="">
+    <option value="">teste</option>
+  </select>
+  <textarea name="" id="" cols="30" rows="2" placeholder="test"></textarea>
+</body>
+</html>
