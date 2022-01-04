@@ -43,14 +43,15 @@
 }
 
 .gl.code-details button {
-  --gl-border: solid 2px var(--gl-colors-01);
+  --gl-border: solid 1px var(--gl-color-code-tab-border);
   /* Rules */
   appearance: none;
-  background: var(--gl-colors-02);
+  background: var(--gl-color-code-tab-bg);
   border-bottom: 0;
   border-left: 0;
   border-radius: 0;
   border: var(--gl-border);
+  color: var(--gl-color-code-tab-text);
   cursor: pointer;
   font-weight: 700;
   transition: background var(--gl-transition), color var(--gl-transition);
@@ -58,8 +59,8 @@
 
 .gl.code-details button:hover,
 .gl.code-details button:focus {
-  background: var(--gl-colors-01);
-  color: var(--gl-colors-02);
+  background: var(--gl-color-code-tab-bg-active);
+  color: var(--gl-color-code-tab-text-active);
 }
 
 .gl.code-details button.html:focus ~ .holder-details .html,
@@ -87,6 +88,8 @@
 }
 
 .gl.holder-details {
+  --gl-border: solid 2px var(--gl-color-code-tab-border);
+  /* Rules */
   border-top: var(--gl-border);
   width: 100%; /* fix bug firefox */
 }
@@ -105,15 +108,15 @@
 .gl.line-number {
   --gl-line-number-width: 46px;
   /* Rules */
-  color: var(--gl-colors-04);
+  color: var(--gl-color-line-number-text);
   display: inline-block;
   text-align: right;
   width: var(--gl-line-number-width);
 }
 
 .gl.line-number.highlight {
-  background: rgba(var(--gl-color-highlight), 0.4);
-  color: var(--gl-colors-02);
+  background: rgba(var(--gl-color-line-number-bg-highlight), 0.4);
+  color: var(--gl-color-line-number-text-highlight);
 }
 
 .gl.line-number::after {
@@ -139,7 +142,7 @@ pre.gl code {
 }
 
 code.gl {
-  background: var(--gl-colors-01);
+  background: var(--gl-color-code-bg);
   font-family: var(--gl-code-font);
   font-weight: 700;
 }
@@ -158,9 +161,9 @@ ol.gl {
 
 ol.gl li::before,
 code.gl .pin-count {
-  background: rgb(var(--gl-color-highlight));
+  background: rgb(var(--gl-color-line-number-bg-pin-count));
   border-radius: 0.25em;
-  color: var(--gl-colors-02);
+  color: var(--gl-color-line-number-text-pin-count);
   display: inline-block;
   padding: 0 0.25em;
   text-align: center;

@@ -1,5 +1,5 @@
 .gl {
-  /* Colors */
+  /* Primitive color token values */
   --gl-colors-01: black;
   --gl-colors-02: white;
   --gl-colors-03: lightgray;
@@ -15,13 +15,26 @@
   --gl-colors-13: darkseagreen;
   --gl-colors-14: cornflowerblue;
   --gl-colors-15: cyan;
-  --gl-color-highlight: 255, 0, 0;
-  /* Skin code default */
+  --gl-colors-16: 255, 0, 0;
+  /* Component code theme tokens */
+  --gl-color-code-bg: var(--gl-colors-01);
+  --gl-color-code-tab-border: var(--gl-color-code-bg);
+  --gl-color-code-tab-bg: var(--gl-colors-02);
+  --gl-color-code-tab-text: var(--gl-color-code-bg);
+  --gl-color-code-tab-bg-active: var(--gl-color-code-tab-text);
+  --gl-color-code-tab-text-active: var(--gl-color-code-tab-bg);
+  --gl-color-line-number-text: var(--gl-colors-04);
+  --gl-color-line-number-bg-highlight: var(--gl-colors-16);
+  --gl-color-line-number-text-highlight: var(--gl-colors-02);
+  --gl-color-line-number-bg-pin-count: var(--gl-colors-16);
+  --gl-color-line-number-text-pin-count: var(--gl-colors-02);
+  /* Code theme HTML */
   --gl-color-html-tag: var(--gl-colors-06);
   --gl-color-html-property: var(--gl-colors-03);
   --gl-color-html-property-value: var(--gl-colors-12);
   --gl-color-html-comment: var(--gl-colors-04);
   --gl-color-html-content: var(--gl-colors-02);
+  /* Code theme CSS */
   --gl-color-css: var(--gl-colors-03);
   --gl-color-css-class-selector: var(--gl-colors-06);
   --gl-color-css-property: var(--gl-colors-05);
@@ -34,6 +47,7 @@
   --gl-color-css-behavior: var(--gl-colors-09);
   --gl-color-css-pseudo-class: var(--gl-colors-08);
   --gl-color-css-prefix: var(--gl-colors-08);
+  /* Code theme Javascript */
   --gl-color-javascript: var(--gl-colors-14);
   /* General configuration tokens */
   --gl-text-color: var(--gl-colors-01);

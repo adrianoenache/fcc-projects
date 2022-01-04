@@ -73,10 +73,7 @@
 		</header>
 		<div class="gl menu-scroll custom-scroll">
 			<a class="gl nav-link" tabindex="1" href="#A">A</a>
-			<a class="gl nav-link" tabindex="2" href="#B">B</a>
-			<a class="gl nav-link" tabindex="3" href="#C">C</a>
-			<a class="gl nav-link" tabindex="4" href="#D">D</a>
-			<a class="gl nav-link" tabindex="5" href="#tdp-guideline">TDP Guideline</a>
+			<a class="gl nav-link" tabindex="5" href="#color-configurations-of-tdp">Color configurations of TDP</a>
 		</div>
 	</nav>
 	<div class="gl toggle-menu">
@@ -87,20 +84,14 @@
 	<main class="gl main" id="main-doc">
 		<div class="gl wrapper-content">
 			<h1 class="gl">Technical Documentation Page (Guideline)</h1>
-			<div class="gl column-content">
-				<p class="gl">
-					This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
-					rel="noopener">freeCodeCamp</a> to get the certification to <a
-					href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
-					Design</a>, <a id="tribute-link"
-					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
-					target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
-				</p>
-				<p class="gl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio exercitationem similique sequi eos nemo nobis debitis eius natus mollitia! Deserunt voluptatum fuga atque enim nesciunt consequatur exercitationem eius! Officiis, accusamus!</p>
-				<p class="gl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio exercitationem similique sequi eos nemo nobis debitis eius natus mollitia! Deserunt voluptatum fuga atque enim nesciunt consequatur exercitationem eius! Officiis, accusamus!</p>
-				<p class="gl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio exercitationem similique sequi eos nemo nobis debitis eius natus mollitia! Deserunt voluptatum fuga atque enim nesciunt consequatur exercitationem eius! Officiis, accusamus!</p>
-				<p class="gl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio exercitationem similique sequi eos nemo nobis debitis eius natus mollitia! Deserunt voluptatum fuga atque enim nesciunt consequatur exercitationem eius! Officiis, accusamus!</p>
-			</div>
+			<p class="gl">
+				This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
+				rel="noopener">freeCodeCamp</a> to get the certification to <a
+				href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
+				Design</a>, <a id="tribute-link"
+				href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
+				target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
+			</p>
 		</div>
 		<section class="gl main-section" id="A">
 			<header class="gl">
@@ -173,166 +164,213 @@
 				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="B">
+		<section class="gl main-section" id="color-configurations-of-tdp">
 			<header class="gl">
 				<h2 class="gl wrapper-content">
-					<a class="gl" href="#B">B</a>
-				</h2>
-			</header>
-			<div class="gl holder-content">
-				content
-			</div>
-		</section>
-		<section class="gl main-section" id="C">
-			<header class="gl">
-				<h2 class="gl wrapper-content">
-					<a class="gl" href="#C">C</a>
-				</h2>
-			</header>
-			<div class="gl holder-content">
-				content
-			</div>
-		</section>
-		<section class="gl main-section" id="D">
-			<header class="gl">
-				<h2 class="gl wrapper-content">
-					<a class="gl" href="#D">D</a>
-				</h2>
-			</header>
-			<div class="gl holder-content">
-				content
-			</div>
-		</section>
-		<section class="gl main-section" id="tdp-guideline">
-			<header class="gl">
-				<h2 class="gl wrapper-content">
-					<a class="gl" href="#tdp-guideline"><abbr title="Technical Documentation Page">TDP</abbr> Guideline</a>
+					<a class="gl" href="#color-configurations-of-tdp">Color configurations of <abbr title="Technical Documentation Page">TDP</abbr></a>
 				</h2>
 			</header>
 			<div class="gl holder-content">
 				<div class="gl wrapper-content">
-					<h3 class="gl">Design Tokens</h3>
-					<p class="gl">These are the custom properties to configure the guideline components on the file <mark class="gl">guideline-tokens.css</mark></p>
-					<h4 class="gl">Base colors</h4>
+					<h3 class="gl">Design Tokens colors</h3>
+					<p class="gl">This values can be configured in the file <mark class="gl">fcc-projects/fcc-assets/css/guideline/guideline-tokens.css</mark></p>
+					<h4 class="gl">Primitive token values</h4>
+					<p class="gl">The numerical nomenclature was chosen to facilitate the maintenance if was necessary add new values. Thinking in the premise that the primitive values are not allowed to be used directly in the compoments. And because of this the color values will receive a generic number name.</p>
+					<ul class="gl">
+						<li>
+							<code class="gl css inline" style="--gl-color-value: black;">
+								<span class="var">--gl-colors-01</span>: <span class="value color">black</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: white;">
+								<span class="var">--gl-colors-02</span>: <span class="value color">white</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: lightgray;">
+								<span class="var">--gl-colors-03</span>: <span class="value color">lightgray</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: gray;">
+								<span class="var">--gl-colors-04</span>: <span class="value color">gray</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: mediumorchid;">
+								<span class="var">--gl-colors-05</span>: <span class="value color">mediumorchid</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: darkgoldenrod;">
+								<span class="var">--gl-colors-06</span>: <span class="value color">darkgoldenrod</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: darkorange;">
+								<span class="var">--gl-colors-07</span>: <span class="value color">darkorange</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: lightsalmon;">
+								<span class="var">--gl-colors-08</span>: <span class="value color">lightsalmon</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: yellow;">
+								<span class="var">--gl-colors-09</span>: <span class="value color">yellow</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: lemonchiffon;">
+								<span class="var">--gl-colors-10</span>: <span class="value color">lemonchiffon</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: chartreuse;">
+								<span class="var">--gl-colors-11</span>: <span class="value color">chartreuse</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: lightgreen;">
+								<span class="var">--gl-colors-12</span>: <span class="value color">lightgreen</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: darkseagreen;">
+								<span class="var">--gl-colors-13</span>: <span class="value color">darkseagreen</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: cornflowerblue;">
+								<span class="var">--gl-colors-14</span>: <span class="value color">cornflowerblue</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: cyan;">
+								<span class="var">--gl-colors-15</span>: <span class="value color">cyan</span>;
+							</code>
+						</li>
+						<li>
+							<code class="gl css inline" style="--gl-color-value: rgb(255, 0, 0);">
+								<span class="var">--gl-color-16</span>: <span class="value color">255, 0, 0</span> <span class="pin-count"></span>;
+							</code>
+						</li>
+					</ul>
+					<hr class="gl">
+					<h5 class="gl">Attention</h5>
+					<ol class="gl">
+						<li>
+							In case of change the values respect the type. Hexadecimal code colors and color names are compatible in the place where is used but not for the other cases. For the example tokens with RBG values require other RGB values to substitution other wise your code will broke.
+						</li>
+					</ol>
+					<hr class="gl">
+					<h5 class="gl">Color samples</h5>
 					<div class="gl-list-grid gl-font-size-small gl-margin-bottom">
 						<span class="gl-colors" style="--gl-color-value: black;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-01</span>: <span class="value color">black</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: white;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-02</span>: <span class="value color">white</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: lightgray;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-03</span>: <span class="value color">lightgray</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: gray;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-04</span>: <span class="value color">gray</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: mediumorchid;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-05</span>: <span class="value color">mediumorchid</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: darkgoldenrod;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-06</span>: <span class="value color">darkgoldenrod</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: darkorange;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-07</span>: <span class="value color">darkorange</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: lightsalmon;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-08</span>: <span class="value color">lightsalmon</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: yellow;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-09</span>: <span class="value color">yellow</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: lemonchiffon;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-10</span>: <span class="value color">lemonchiffon</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: chartreuse;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-11</span>: <span class="value color">chartreuse</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: lightgreen;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-12</span>: <span class="value color">lightgreen</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: darkseagreen;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-13</span>: <span class="value color">darkseagreen</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: cornflowerblue;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-14</span>: <span class="value color">cornflowerblue</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: cyan;">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-colors-15</span>: <span class="value color">cyan</span>;
-							</code>
 						</span>
 						<span class="gl-colors" style="--gl-color-value: rgb(255, 0, 0);">
 							<span class="gl-color-sample gl-stage"></span>
-							<code class="gl css inline">
-								<span class="var">--gl-color-highlight</span>: <span class="value color">255, 0, 0</span>;
-							</code>
 						</span>
 					</div>
-					<h4 class="gl">Skin code colors</h4>
+					<h4 class="gl">Component code theme tokens</h4>
+					<p class="gl">These are the base theme color tokens of the component "code" for the modes inline and block.</p>
 					<!-- -->
-					<pre class="gl css" contenteditable="true" style="--gl-start-line-at: 19;"><code class="gl custom-scroll" contenteditable="false">
-<span class="gl line-number"></span>  <span class="var">--gl-color-html-tag</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-06);"></span>var(--gl-colors-06);
-<span class="gl line-number"></span>  <span class="var">--gl-color-html-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-03);"></span>var(--gl-colors-03);
-<span class="gl line-number"></span>  <span class="var">--gl-color-html-property-value</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-12);"></span>var(--gl-colors-12);
-<span class="gl line-number"></span>  <span class="var">--gl-color-html-comment</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-04);"></span>var(--gl-colors-04);
-<span class="gl line-number"></span>  <span class="var">--gl-color-html-content</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-02);"></span>var(--gl-colors-02);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-03);"></span>var(--gl-colors-03);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-class-selector</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-06);"></span>var(--gl-colors-06);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-05);"></span>var(--gl-colors-05);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-property-value</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-07);"></span>var(--gl-colors-07);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-string</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-10);"></span>var(--gl-colors-10);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-function</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-14);"></span>var(--gl-colors-14);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-math</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-11);"></span>var(--gl-colors-11);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-custom-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-15);"></span>var(--gl-colors-15);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-comment</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-04);"></span>var(--gl-colors-04);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-behavior</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-09);"></span>var(--gl-colors-09);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-pseudo-class</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-08);"></span>var(--gl-colors-08);
-<span class="gl line-number"></span>  <span class="var">--gl-color-css-prefix</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-06);"></span>var(--gl-colors-08);
-<span class="gl line-number"></span>  <span class="var">--gl-color-javascript</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-14);"></span>var(--gl-colors-14);
+					<pre class="gl css" style="--gl-start-line-at: 19;"><code class="gl custom-scroll">
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-bg</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-01);"></span><span class="function">var</span>(<span class="var">--gl-colors-01</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-tab-border</span>: <span class="value color" style="--gl-color-value: var(--gl-color-code-bg);"></span><span class="function">var</span>(<span class="var">--gl-color-code-bg</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-tab-bg</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="function">var</span>(<span class="var">--gl-colors-02</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-tab-text</span>: <span class="value color" style="--gl-color-value: var(--gl-color-code-bg);"></span><span class="function">var</span>(<span class="var">--gl-color-code-bg</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-tab-bg-active</span>: <span class="value color" style="--gl-color-value: var(--gl-color-code-tab-text);"></span><span class="function">var</span>(<span class="var">--gl-color-code-tab-text</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-code-tab-text-active</span>: <span class="value color" style="--gl-color-value: var(--gl-color-code-tab-bg);"></span><span class="function">var</span>(<span class="var">--gl-color-code-tab-bg</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-line-number-text</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="function">var</span>(<span class="var">--gl-colors-04</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-line-number-bg-highlight</span>: <span class="value color" style="--gl-color-value: rgb(var(--gl-colors-16));"></span><span class="function">var</span>(<span class="var">--gl-colors-16</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-line-number-text-highlight</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="function">var</span>(<span class="var">--gl-colors-02</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-line-number-bg-pin-count</span>: <span class="value color" style="--gl-color-value: rgb(var(--gl-colors-16));"></span><span class="function">var</span>(<span class="var">--gl-colors-16</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-line-number-text-pin-count</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="function">var</span>(<span class="var">--gl-colors-02</span>);
+
+</code></pre>
+<!-- -->
+					<h4 class="gl">Component code theme tokens for HTML</h4>
+					<p class="gl">This are the color theme tokens for HTML code.</p>
+					<!-- -->
+					<pre class="gl css" style="--gl-start-line-at: 31;"><code class="gl custom-scroll">
+<span class="gl line-number"></span>  <span class="var">--gl-color-html-tag</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="function">var</span>(<span class="var">--gl-colors-06</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-html-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="function">var</span>(<span class="var">--gl-colors-03</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-html-property-value</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-12);"></span><span class="function">var</span>(<span class="var">--gl-colors-12</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-html-comment</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="function">var</span>(<span class="var">--gl-colors-04</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-html-content</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="function">var</span>(<span class="var">--gl-colors-02</span>);
+
+</code></pre>
+<!-- -->
+					<h4 class="gl">Component code theme tokens for CSS</h4>
+					<p class="gl">This are the color theme tokens for CSS code.</p>
+<!-- -->
+<pre class="gl css" style="--gl-start-line-at: 37;"><code class="gl custom-scroll">
+<span class="gl line-number"></span>  <span class="var">--gl-color-css</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="function">var</span>(<span class="var">--gl-colors-03</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-class-selector</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="function">var</span>(<span class="var">--gl-colors-06</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-05);"></span><span class="function">var</span>(<span class="var">--gl-colors-05</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-property-value</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-07);"></span><span class="function">var</span>(<span class="var">--gl-colors-07</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-string</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-10);"></span><span class="function">var</span>(<span class="var">--gl-colors-10</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-function</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-14);"></span><span class="function">var</span>(<span class="var">--gl-colors-14</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-math</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-11);"></span><span class="function">var</span>(<span class="var">--gl-colors-11</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-custom-property</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-15);"></span><span class="function">var</span>(<span class="var">--gl-colors-15</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-comment</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-04);"></span><span class="function">var</span>(<span class="var">--gl-colors-04</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-behavior</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-09);"></span><span class="function">var</span>(<span class="var">--gl-colors-09</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-pseudo-class</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-08);"></span><span class="function">var</span>(<span class="var">--gl-colors-08</span>);
+<span class="gl line-number"></span>  <span class="var">--gl-color-css-prefix</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-08);"></span><span class="function">var</span>(<span class="var">--gl-colors-08</span>);
+
+</code></pre>
+<!-- -->
+					<h4 class="gl">Component code theme tokens for Javascript</h4>
+					<p class="gl">This will be done with more details in the future.</p>
+<!-- -->
+<pre class="gl css" style="--gl-start-line-at: 50;"><code class="gl custom-scroll">
+<span class="gl line-number"></span>  <span class="var">--gl-color-javascript</span>: <span class="value color" style="--gl-color-value: var(--gl-colors-14);"></span><span class="function">var</span>(<span class="var">--gl-colors-14</span>);
 
 </code></pre>
 <!-- -->
