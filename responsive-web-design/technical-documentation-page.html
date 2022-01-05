@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="gl gl-stage" lang="en">
 
 <head prefix="og: https://ogp.me/ns#">
 	<meta charset="UTF-8">
@@ -55,17 +55,17 @@
 	<meta name="twitter:url" content="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/technical-documentation-page.html" />
 
 	<!-- Critical CSS -->
-	<style>
-	</style>
+	<!-- <style>
+	</style> -->
 	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/technical-documentation-page.css" />
 	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/guideline.css" />
 </head>
 
-<body class="gl">
+<body>
 	<!-- Guideline -->
 	<nav class="gl menu gl-stage" id="navbar">
 		<header>
-			<h1 class="gl main-title">
+			<h1 class="gl-main-title">
 				Technical<br>
 				Documentation<br>
 				Page (Guideline)
@@ -82,25 +82,27 @@
 	</div>
 	<a class="gl overlay-close-menu" href="#close-menu">Overlay close menu</a>
 	<main class="gl main" id="main-doc">
-		<div class="gl wrapper-content">
+		<div class="gl-wrapper-content">
 			<h1 class="gl">Technical Documentation Page (Guideline)</h1>
-			<p class="gl">
-				This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
-				rel="noopener">freeCodeCamp</a> to get the certification to <a
-				href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
-				Design</a>, <a id="tribute-link"
-				href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
-				target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
-			</p>
+			<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 30ch;">
+				<p class="gl">
+					This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
+					rel="noopener">freeCodeCamp</a> to get the certification to <a
+					href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
+					Design</a>, <a id="tribute-link"
+					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
+					target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
+				</p>
+			</div>
 		</div>
-		<section class="gl main-section" id="A">
+		<section class="gl-main-section" id="A">
 			<header class="gl">
-				<h2 class="gl wrapper-content">
+				<h2 class="gl-wrapper-content">
 					<a class="gl" href="#A">A</a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				<p class="gl wrapper-content">
+			<div class="gl-holder-content">
+				<p class="gl-wrapper-content">
 					<code
 						class="gl html inline"><span class="gl line-number custom highlight">999</span> <span class="pin-count custom">999</span>&lt;!DOCTYPE <span class="property">html</span>&gt</code>
 					sdsdsgdgsdgsugau
@@ -114,7 +116,7 @@
 <span class="gl line-number"></span>&lt;/code&gt;&lt;/pre&gt;
 
 </code></pre>
-				<ol class="gl wrapper-content">
+				<ol class="gl-wrapper-content">
 					<li>A</li>
 					<li>B</li>
 					<li>C</li>
@@ -164,18 +166,20 @@
 				</div>
 			</div>
 		</section>
-		<section class="gl main-section" id="color-configurations-of-tdp">
+		<section class="gl-main-section" id="color-configurations-of-tdp">
 			<header class="gl">
-				<h2 class="gl wrapper-content">
-					<a class="gl" href="#color-configurations-of-tdp">Color configurations of <abbr title="Technical Documentation Page">TDP</abbr></a>
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#color-configurations-of-tdp">Color configurations of <abbr class="gl"  title="Technical Documentation Page">TDP</abbr></a>
 				</h2>
 			</header>
-			<div class="gl holder-content">
-				<div class="gl wrapper-content">
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
 					<h3 class="gl">Design Tokens colors</h3>
 					<p class="gl">This values can be configured in the file <mark class="gl">fcc-projects/fcc-assets/css/guideline/guideline-tokens.css</mark></p>
 					<h4 class="gl">Primitive token values</h4>
-					<p class="gl">The numerical nomenclature was chosen to facilitate the maintenance if was necessary add new values. Thinking in the premise that the primitive values are not allowed to be used directly in the compoments. And because of this the color values will receive a generic number name.</p>
+					<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
+						<p class="gl">The numerical nomenclature was chosen to facilitate the maintenance if was necessary add new values. Thinking in the premise that the primitive values are not allowed to be used directly in the compoments. And because of this the color values will receive a generic number name.</p>
+					</div>
 					<ul class="gl">
 						<li>
 							<code class="gl css inline" style="--gl-color-value: black;">
@@ -254,13 +258,13 @@
 						</li>
 						<li>
 							<code class="gl css inline" style="--gl-color-value: rgb(255, 0, 0);">
-								<span class="var">--gl-color-16</span>: <span class="value color">255, 0, 0</span> <span class="pin-count"></span>;
+								<span class="var">--gl-color-16</span>: <span class="value color">255, 0, 0;</span> <span class="pin-count"></span>
 							</code>
 						</li>
 					</ul>
 					<hr class="gl">
 					<h5 class="gl">Attention</h5>
-					<ol class="gl">
+					<ol class="gl gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
 						<li>
 							In case of change the values respect the type. Hexadecimal code colors and color names are compatible in the place where is used but not for the other cases. For the example tokens with RBG values require other RGB values to substitution other wise your code will broke.
 						</li>

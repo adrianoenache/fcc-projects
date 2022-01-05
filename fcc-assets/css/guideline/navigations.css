@@ -41,7 +41,7 @@
   border-bottom-left-radius: 2em;
   border-top-left-radius: 2em;
   border-right: 0;
-  color: var(--gl-text-color);
+  color: var(--gl-color-text);
   display: inline-block;
   font-size: 1rem;
   line-height: 2em;
@@ -85,7 +85,7 @@
 
 .gl.nav-link {
   background-color: var(--gl-background);
-  color: var(--gl-text-color);
+  color: var(--gl-color-text);
   padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter);
 }
 

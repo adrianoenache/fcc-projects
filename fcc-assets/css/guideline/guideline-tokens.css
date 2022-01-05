@@ -50,39 +50,40 @@
   /* Code theme Javascript */
   --gl-color-javascript: var(--gl-colors-14);
   /* General configuration tokens */
-  --gl-text-color: var(--gl-colors-01);
+  --gl-color-text: var(--gl-colors-01);
+  --gl-color-text-decoration: var(--gl-colors-05);
   --gl-background: var(--gl-colors-02);
-  --gl-background-stage-color: var(--gl-colors-03);
-  --gl-background-stage: linear-gradient(
+  --gl-background-stage: var(--gl-colors-03);
+  --gl-background-stage-texture: linear-gradient(
       45deg,
-      var(--gl-background-stage-color) 25%,
+      var(--gl-background-stage) 25%,
       transparent 25%,
       transparent 75%,
-      var(--gl-background-stage-color) 75%,
-      var(--gl-background-stage-color)
+      var(--gl-background-stage) 75%,
+      var(--gl-background-stage)
     ),
     linear-gradient(
       45deg,
-      var(--gl-background-stage-color) 25%,
+      var(--gl-background-stage) 25%,
       transparent 25%,
       transparent 75%,
-      var(--gl-background-stage-color) 75%,
-      var(--gl-background-stage-color)
+      var(--gl-background-stage) 75%,
+      var(--gl-background-stage)
     );
+  --gl-background-mark: var(--gl-colors-03);
   --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
   --gl-code-font: 'Courier New', Courier, monospace;
   --gl-font-size-small: 14px;
+  --gl-title-base-font-size: 18px;
   --gl-border: solid var(--gl-border-size) var(--gl-colors-01);
+  --gl-border-size: 5px;
+  --gl-menu-width: 300px;
   --gl-gutter: 10px;
   --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
   --gl-transition: 0.3s ease;
-  --gl-border-size: 5px;
-  --gl-menu-width: 300px;
+  /* Z-index */
   --gl-behind: 1;
   --gl-content: 5;
   --gl-above: 10;
   --gl-modal: 15;
-  /* Rules */
-  box-sizing: border-box;
-  font-family: var(--gl-text-font);
 }
