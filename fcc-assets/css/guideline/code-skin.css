@@ -116,7 +116,6 @@ code.gl.css .prefix {
   color: var(--gl-color-css-prefix);
 }
 
-.javascript code.gl,
-code.gl.javascript {
+.gl-javascript {
   color: var(--gl-color-javascript);
 }

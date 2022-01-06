@@ -73,8 +73,8 @@
   height: auto;
 }
 
-.gl.code-details button.javascript:focus ~ .holder-details .javascript,
-.gl.holder-details .javascript:focus {
+.gl.code-details button.gl-javascript:focus ~ .holder-details .gl-javascript,
+.gl.holder-details .gl-javascript:focus {
   height: auto;
 }
 
