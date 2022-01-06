@@ -34,28 +34,23 @@
   font-size: 0;
 }
 
-.css code.gl,
-code.gl.css {
+.gl-css {
   color: var(--gl-color-css);
 }
 
-.css code.gl .selector,
-code.gl.css .selector {
+.gl-css .gl-selector {
   color: var(--gl-color-css-class-selector);
 }
 
-.css code.gl .property,
-code.gl.css .property {
+.gl-css .gl-property {
   color: var(--gl-color-css-property);
 }
 
-.css code.gl .value,
-code.gl.css .value {
+.gl-css .gl-value {
   color: var(--gl-color-css-property-value);
 }
 
-.css code.gl .value.color::before,
-code.gl.css .value.color::before {
+.gl-css .gl-value.gl-color::before {
   background-color: var(--gl-color-value);
   border-radius: 25%;
   border: solid 1px var(--gl-color-css);
@@ -68,43 +63,35 @@ code.gl.css .value.color::before {
   width: 1em;
 }
 
-.css code.gl .string,
-code.gl.css .string {
+.gl-css .gl-string {
   color: var(--gl-color-css-string);
 }
 
-.css code.gl .function,
-code.gl.css .function {
+.gl-css .gl-function {
   color: var(--gl-color-css-function);
 }
 
-.css code.gl .math,
-code.gl.css .math {
+.gl-css .gl-math {
   color: var(--gl-color-css-math);
 }
 
-.css code.gl .var,
-code.gl.css .var {
+.gl-css .gl-var {
   color: var(--gl-color-css-custom-property);
 }
 
-.css code.gl .comment,
-code.gl.css .comment {
+.gl-css .gl-comment {
   color: var(--gl-color-css-comment);
 }
 
-.css code.gl .state,
-code.gl.css .state {
+.gl-css .gl-state {
   color: var(--gl-color-css-behavior);
 }
 
-.css code.gl .pseudo,
-code.gl.css .pseudo {
+.gl-css .gl-pseudo {
   color: var(--gl-color-css-pseudo-class);
 }
 
-.css code.gl .prefix,
-code.gl.css .prefix {
+.gl-css .gl-prefix {
   color: var(--gl-color-css-prefix);
 }
 

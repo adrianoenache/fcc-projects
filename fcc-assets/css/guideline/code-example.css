@@ -68,8 +68,8 @@
   height: auto;
 }
 
-.gl.code-details button.css:focus ~ .holder-details .css,
-.gl.holder-details .css:focus {
+.gl.code-details button.gl-css:focus ~ .holder-details .gl-css,
+.gl.holder-details .gl-css:focus {
   height: auto;
 }
 
