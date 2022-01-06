@@ -69,10 +69,6 @@ hr.gl {
   margin: 2em auto;
 }
 
-.gl-font-size-small {
-  font-size: var(--gl-font-size-small);
-}
-
 .gl-margin-bottom {
   margin-bottom: calc(var(--gl-gutter) * 5);
 }

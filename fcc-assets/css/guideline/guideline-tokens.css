@@ -73,7 +73,6 @@
   --gl-background-mark: var(--gl-colors-03);
   --gl-text-font: Verdana, Geneva, Tahoma, sans-serif;
   --gl-code-font: 'Courier New', Courier, monospace;
-  --gl-font-size-small: 14px;
   --gl-title-base-font-size: 18px;
   --gl-border: solid var(--gl-border-size) var(--gl-colors-01);
   --gl-border-size: 5px;
