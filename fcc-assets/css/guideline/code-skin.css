@@ -1,44 +1,36 @@
-.html code.gl,
-code.gl.html {
+.gl-html {
   color: var(--gl-color-html-tag);
 }
 
-.html code.gl .property,
-code.gl.html .property {
+.gl-html .gl-property {
   color: var(--gl-color-html-property);
 }
 
-.html code.gl .value,
-code.gl.html .value {
+.gl-html .gl-value {
   color: var(--gl-color-html-property-value);
 }
 
-.html code.gl .comment,
-code.gl.html .comment {
+.gl-html .gl-comment {
   color: var(--gl-color-html-comment);
 }
 
-.html code.gl .content,
-code.gl.html .content {
+.gl-html .gl-content {
   color: var(--gl-color-html-content);
   cursor: pointer;
   font-size: 0;
   white-space: normal;
 }
 
-.html code.gl .content:hover,
-code.gl.html .content:hover {
+.gl-html .gl-content:hover {
   font-size: 1em;
 }
 
-.html code.gl .content:after,
-code.gl.html .content:after {
+.gl-html .gl-content:after {
   content: "...";
   font-size: 1rem;
 }
 
-.html code.gl .content:hover:after,
-code.gl.html .content:hover:after {
+.gl-html .gl-content:hover:after {
   font-size: 0;
 }
 
