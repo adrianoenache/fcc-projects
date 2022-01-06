@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.gl.code-details {
+.gl-code-details {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2rem 1fr;
@@ -42,7 +42,7 @@
   grid-area: j;
 }
 
-.gl.code-details button {
+.gl-code-details button {
   --gl-border: solid 1px var(--gl-color-code-tab-border);
   /* Rules */
   appearance: none;
@@ -57,55 +57,55 @@
   transition: background var(--gl-transition), color var(--gl-transition);
 }
 
-.gl.code-details button:hover,
-.gl.code-details button:focus {
+.gl-code-details button:hover,
+.gl-code-details button:focus {
   background: var(--gl-color-code-tab-bg-active);
   color: var(--gl-color-code-tab-text-active);
 }
 
-.gl.code-details button.gl-html:focus ~ .holder-details .gl-html,
-.gl.holder-details .gl-html:focus {
+.gl-code-details button.gl-html:focus ~ .gl-holder-details .gl-html,
+.gl-holder-details .gl-html:focus {
   height: auto;
 }
 
-.gl.code-details button.gl-css:focus ~ .holder-details .gl-css,
-.gl.holder-details .gl-css:focus {
+.gl-code-details button.gl-css:focus ~ .gl-holder-details .gl-css,
+.gl-holder-details .gl-css:focus {
   height: auto;
 }
 
-.gl.code-details button.gl-javascript:focus ~ .holder-details .gl-javascript,
-.gl.holder-details .gl-javascript:focus {
+.gl-code-details button.gl-javascript:focus ~ .gl-holder-details .gl-javascript,
+.gl-holder-details .gl-javascript:focus {
   height: auto;
 }
 
-.gl.code-details button:first-of-type {
+.gl-code-details button:first-of-type {
   border-left: var(--gl-border);
   border-top-left-radius: 1em;
 }
 
-.gl.code-details button:last-of-type {
+.gl-code-details button:last-of-type {
   border-top-right-radius: 1em;
 }
 
-.gl.holder-details {
+.gl-holder-details {
   --gl-border: solid 2px var(--gl-color-code-tab-border);
   /* Rules */
   border-top: var(--gl-border);
   width: 100%; /* fix bug firefox */
 }
 
-.gl.holder-details .example {
+.gl-holder-details .gl-example {
   margin: var(--gl-gutter) 0;
   position: relative;
 }
 
-.gl.holder-details pre {
+.gl-holder-details pre {
   height: 0;
   margin: 0;
   overflow-y: hidden;
 }
 
-.gl.line-number {
+.gl-line-number {
   --gl-line-number-width: 46px;
   /* Rules */
   color: var(--gl-color-line-number-text);
@@ -114,17 +114,17 @@
   width: var(--gl-line-number-width);
 }
 
-.gl.line-number.highlight {
+.gl-line-number.gl-highlight {
   background: rgba(var(--gl-color-line-number-bg-highlight), 0.4);
   color: var(--gl-color-line-number-text-highlight);
 }
 
-.gl.line-number::after {
+.gl-line-number::after {
   counter-increment: line-number;
   content: counter(line-number) ".";
 }
 
-.gl.line-number.custom::after {
+.gl-line-number.gl-custom::after {
   content: ".";
 }
 
@@ -160,7 +160,7 @@ ol.gl {
 }
 
 ol.gl li::before,
-code.gl .pin-count {
+code .gl-pin-count {
   background: rgb(var(--gl-color-line-number-bg-pin-count));
   border-radius: 0.25em;
   color: var(--gl-color-line-number-text-pin-count);
@@ -169,7 +169,7 @@ code.gl .pin-count {
   text-align: center;
 }
 
-code.gl .pin-count {
+code .gl-pin-count {
   line-height: 1.25em;
 }
 
@@ -189,16 +189,16 @@ ol.gl li:last-of-type {
 }
 
 ol.gl li::before,
-code.gl .pin-count::before {
+code .gl-pin-count::before {
   counter-increment: pin-count;
   content: counter(pin-count);
 }
 
-code.gl .pin-count.custom::before {
+code .gl-pin-count.gl-custom::before {
   display: none;
 }
 
-code.gl.inline {
+code.gl-inline {
   padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter)
     calc(var(--gl-gutter) * 0.5) 0;
 }
