@@ -81,6 +81,12 @@
   --gl-gutter: 10px;
   --gl-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.75);
   --gl-transition: 0.3s ease;
+  /* Custom scroll */
+  --gl-scroll-thumb-background: var(--gl-colors-03);
+  --gl-scroll-thumb-background-hover: var(--gl-colors-04);
+  --gl-scroll-bar-background: var(--gl-colors-01);
+  --gl-scroll-bar-width-firefox: thin;
+  --gl-scroll-bar-width-chromium: 8px;
   /* Z-index */
   --gl-behind: 1;
   --gl-content: 5;

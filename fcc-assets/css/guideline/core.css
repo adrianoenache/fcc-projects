@@ -6,6 +6,7 @@
 
 [class*="gl"] code * {
   font-family: var(--gl-code-font);
+  line-height: 1em;
 }
 
 a.gl,
@@ -158,32 +159,26 @@ hr.gl {
   grid-template-columns: repeat(auto-fit, minmax(var(--min-template-column-size, 1fr), 1fr));
 }
 
-.gl.custom-scroll {
-  --scroll-thumb-background: var(--gl-colors-03);
-  --scroll-thumb-background-hover: var(--gl-colors-04);
-  --scroll-bar-background: var(--gl-colors-01);
-  --scroll-bar-width-firefox: thin;
-  --scroll-bar-width-chromium: 8px;
-  /* Rules */
+.gl-custom-scroll {
   /* -moz- Firefox custom scroll */
-  scrollbar-color: var(--scroll-thumb-background) var(--scroll-bar-background);
-  scrollbar-width: var(--scroll-bar-width-firefox);
+  scrollbar-color: var(--gl-scroll-thumb-background) var(--gl-scroll-bar-background);
+  scrollbar-width: var(--gl-scroll-bar-width-firefox);
 }
 
 /* -webkit- Edge, Chrome, Opera, Safari custom scroll */
-.gl.custom-scroll::-webkit-scrollbar {
-  background: var(--scroll-bar-background);
-  width: var(--scroll-bar-width-chromium);
-  height: var(--scroll-bar-width-chromium);
+.gl-custom-scroll::-webkit-scrollbar {
+  background: var(--gl-scroll-bar-background);
+  width: var(--gl-scroll-bar-width-chromium);
+  height: var(--gl-scroll-bar-width-chromium);
 }
 
-.gl.custom-scroll::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb-background);
-  border: solid 1px var(--scroll-bar-background);
+.gl-custom-scroll::-webkit-scrollbar-thumb {
+  background: var(--gl-scroll-thumb-background);
+  border: solid 1px var(--gl-scroll-bar-background);
 }
 
-.gl.custom-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--scroll-thumb-background-hover);
+.gl-custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--gl-scroll-thumb-background-hover);
 }
 
 /* Tablet rules */
