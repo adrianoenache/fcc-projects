@@ -4,6 +4,10 @@
   line-height: 1.5em;
 }
 
+[class*="gl"] code * {
+  font-family: var(--gl-code-font);
+}
+
 a.gl,
 button.gl,
 [contenteditable].gl {
