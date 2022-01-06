@@ -1,4 +1,4 @@
-.gl.menu {
+.gl-menu {
   border-right: var(--gl-border);
   height: 100%;
   left: calc(var(--gl-menu-width) * -1);
@@ -9,25 +9,25 @@
   z-index: var(--gl-modal);
 }
 
-.gl.menu:target {
+.gl-menu:target {
   left: 0;
 }
 
-.gl.menu:target ~ .gl.toggle-menu .gl.close-menu {
+.gl-menu:target ~ .gl-toggle-menu .gl-close-menu {
   display: block;
 }
 
-.gl.menu:target ~ .gl.overlay-close-menu {
+.gl-menu:target ~ .gl-overlay-close-menu {
   background: var(--gl-colors-01);
   opacity: 0.7;
   pointer-events: all;
 }
 
-.gl.menu:target .gl.menu-scroll {
+.gl-menu:target .gl-menu-scroll {
   display: flex;
 }
 
-.gl.toggle-menu {
+.gl-toggle-menu {
   font-size: 0;
   position: fixed;
   right: 0;
@@ -35,7 +35,7 @@
   z-index: var(--gl-modal);
 }
 
-.gl.button-menu {
+.gl-button-menu {
   background-color: var(--gl-background);
   border: var(--gl-border);
   border-bottom-left-radius: 2em;
@@ -50,7 +50,7 @@
   transition: color var(--gl-transition);
 }
 
-.gl.close-menu {
+.gl-close-menu {
   background: transparent;
   display: none;
   height: 100%;
@@ -61,7 +61,7 @@
   z-index: var(--gl-content);
 }
 
-.gl.overlay-close-menu {
+.gl-overlay-close-menu {
   background: var(--gl-colors-01);
   font-size: 0;
   height: 100%;
@@ -75,7 +75,7 @@
   z-index: calc(var(--gl-modal) - 1);
 }
 
-.gl.menu-scroll {
+.gl-menu-scroll {
   display: none;
   flex-direction: column;
   height: calc(100% - 95px);
@@ -83,17 +83,17 @@
   overflow-y: auto;
 }
 
-.gl.nav-link {
+.gl-nav-link {
   background-color: var(--gl-background);
   color: var(--gl-color-text);
   padding: calc(var(--gl-gutter) * 0.5) var(--gl-gutter);
 }
 
-.gl.button-menu:focus,
-.gl.button-menu:hover,
-.gl.close-menu:focus + a,
-.gl.close-menu:hover + a,
-.gl.nav-link:focus,
-.gl.nav-link:hover {
+.gl-button-menu:focus,
+.gl-button-menu:hover,
+.gl-close-menu:focus + a,
+.gl-close-menu:hover + a,
+.gl-nav-link:focus,
+.gl-nav-link:hover {
   color: var(--gl-colors-05);
 }
