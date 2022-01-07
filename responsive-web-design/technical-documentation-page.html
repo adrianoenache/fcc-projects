@@ -55,8 +55,29 @@
 	<meta name="twitter:url" content="https://adrianoenache.dev.br/fcc-projects/responsive-web-design/technical-documentation-page.html" />
 
 	<!-- Critical CSS -->
-	<!-- <style>
-	</style> -->
+	<style>
+/* Tablet rules */
+/* Rule to work from tablet and above resolutions */
+@media only screen and (min-width: 426px) {
+  .gl-column-content {
+    --column-quantity: var(--column-quantity-tablet);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-tablet);
+  }
+}
+
+/* Notebook rules */
+/* Rule to work from notebook and above resolutions */
+@media only screen and (min-width: 1025px) {
+  .gl-column-content {
+    --column-quantity: var(--column-quantity-notebook);
+  }
+  .gl-list-grid {
+    --min-template-column-size: var(--min-template-column-size-notebook);
+  }
+}
+	</style>
 	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/technical-documentation-page.css" />
 	<link rel="stylesheet" type="text/css" href="../fcc-assets/css/guideline.css" />
 </head>
@@ -72,8 +93,8 @@
 			</h1>
 		</header>
 		<div class="gl gl-menu-scroll gl-custom-scroll">
-			<a class="gl gl-nav-link" tabindex="1" href="#A">A</a>
-			<a class="gl gl-nav-link" tabindex="5" href="#color-configurations-of-tdp">Color configurations of TDP</a>
+			<a class="gl gl-nav-link nav-link" tabindex="1" href="#A">A</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#design_tokens_of_tdp">Design tokens of TDP</a>
 		</div>
 	</nav>
 	<div class="gl gl-toggle-menu">
@@ -95,7 +116,7 @@
 				</p>
 			</div>
 		</div>
-		<section class="gl-main-section" id="A">
+		<section class="gl-main-section main-section" id="A">
 			<header class="gl">
 				<h2 class="gl-wrapper-content">
 					<a class="gl" href="#A">A</a>
@@ -115,6 +136,16 @@
 <span class="gl gl-line-number"></span>&lt;/code&gt;&lt;/pre&gt;
 
 </code></pre>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
+<p>Lorem</p>
 				<ol class="gl">
 					<li>A</li>
 					<li>B</li>
@@ -168,21 +199,21 @@
 				</div>
 			</div>
 		</section>
-		<section class="gl-main-section" id="color-configurations-of-tdp">
+		<section class="gl-main-section main-section" id="design_tokens_of_tdp">
 			<header class="gl">
 				<h2 class="gl-wrapper-content">
-					<a class="gl" href="#color-configurations-of-tdp">Color configurations of <abbr class="gl"  title="Technical Documentation Page">TDP</abbr></a>
+					<a class="gl" href="#design_tokens_of_tdp">Design tokens of <abbr class="gl" title="Technical Documentation Page">TDP</abbr></a>
 				</h2>
 			</header>
 			<div class="gl-holder-content">
 				<div class="gl-wrapper-content">
-					<h3 class="gl">Design Tokens colors</h3>
+					<h3 class="gl">Design Tokens for colors and themes</h3>
 					<p class="gl">This values can be configured in the file <mark class="gl">fcc-projects/fcc-assets/css/guideline/guideline-tokens.css</mark></p>
 					<h4 class="gl">Primitive token values</h4>
 					<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
 						<p class="gl">The numerical nomenclature was chosen to facilitate the maintenance if was necessary add new values. Thinking in the premise that the primitive values are not allowed to be used directly in the compoments. And because of this the color values will receive a generic number name.</p>
 					</div>
-					<ul class="gl">
+					<ul class="gl gl-margin-bottom">
 						<li>
 							<code class="gl gl-css gl-inline" style="--gl-color-value: black;">
 								<span class="gl-var">--gl-colors-01</span>: <span class="gl-value gl-color">black</span>;
@@ -264,14 +295,12 @@
 							</code>
 						</li>
 					</ul>
-					<hr class="gl">
 					<h5 class="gl">Attention</h5>
-					<ol class="gl gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
+					<ol class="gl gl-column-content gl-margin-bottom" style="--column-quantity-custom: auto; --column-width-custom: 40ch;">
 						<li>
 							In case of change the values respect the type. Hexadecimal code colors and color names are compatible in the place where is used but not for the other cases. For the example tokens with RBG values require other RGB values to substitution other wise your code will broke.
 						</li>
 					</ol>
-					<hr class="gl">
 					<h5 class="gl">Color samples</h5>
 					<div class="gl-list-grid gl-margin-bottom">
 						<span class="gl-colors" style="--gl-color-value: black;">
@@ -323,10 +352,11 @@
 							<span class="gl-color-sample gl-stage"></span>
 						</span>
 					</div>
+					<hr class="gl">
 					<h4 class="gl">Component code theme tokens</h4>
 					<p class="gl">These are the base theme color tokens of the component "code" for the modes inline and block.</p>
 					<!-- -->
-					<pre class="gl gl-css" style="--gl-start-line-at: 19;"><code class="gl gl-custom-scroll">
+					<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 19;"><code class="gl gl-custom-scroll">
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-bg</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-01);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-border</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-color-code-bg);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-color-code-bg</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-code-tab-bg</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-02);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
@@ -341,10 +371,11 @@
 
 </code></pre>
 <!-- -->
+					<hr class="gl">
 					<h4 class="gl">Component code theme tokens for HTML</h4>
 					<p class="gl">This are the color theme tokens for HTML code.</p>
 					<!-- -->
-					<pre class="gl gl-css" style="--gl-start-line-at: 31;"><code class="gl gl-custom-scroll">
+					<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 31;"><code class="gl gl-custom-scroll">
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-tag</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-06</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-property</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-html-property-value</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-12);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-12</span>);
@@ -353,10 +384,11 @@
 
 </code></pre>
 <!-- -->
+					<hr class="gl">
 					<h4 class="gl">Component code theme tokens for CSS</h4>
 					<p class="gl">This are the color theme tokens for CSS code.</p>
 <!-- -->
-<pre class="gl gl-css" style="--gl-start-line-at: 37;"><code class="gl gl-custom-scroll">
+<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 37;"><code class="gl gl-custom-scroll">
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-03);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-class-selector</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-06);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-06</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-css-property</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-05);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-05</span>);
@@ -372,15 +404,17 @@
 
 </code></pre>
 <!-- -->
+					<hr class="gl">
 					<h4 class="gl">Component code theme tokens for Javascript</h4>
 					<p class="gl">This will be done with more details in the future.</p>
 <!-- -->
-<pre class="gl gl-css" style="--gl-start-line-at: 50;"><code class="gl gl-custom-scroll">
+<pre class="gl gl-css gl-margin-bottom" style="--gl-start-line-at: 50;"><code class="gl gl-custom-scroll">
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-javascript</span>: <span class="gl-value gl-color" style="--gl-color-value: var(--gl-colors-14);"></span><span class="gl-function">var</span>(<span class="gl-var">--gl-colors-14</span>);
 
 </code></pre>
 <!-- -->
-					<h4 class="gl">General configuration tokens</h4>
+					<hr class="gl">
+					<h3 class="gl">General Design Tokens</h3>
 					<!-- -->
 					<pre class="gl gl-css" contenteditable="true" style="--gl-start-line-at: 38;"><code class="gl gl-custom-scroll" contenteditable="false">
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-text-color</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);

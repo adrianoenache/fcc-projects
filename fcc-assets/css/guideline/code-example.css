@@ -155,7 +155,6 @@ code.gl {
 
 ol.gl {
   list-style: none;
-  margin: var(--gl-gutter) 0;
   padding: 0;
 }
 
