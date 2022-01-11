@@ -95,6 +95,12 @@
 		<div class="gl gl-menu-scroll gl-custom-scroll">
 			<a class="gl gl-nav-link nav-link" tabindex="1" href="#A">A</a>
 			<a class="gl gl-nav-link nav-link" tabindex="5" href="#design_tokens_of_tdp">Design tokens of TDP</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#components_of_tdp">Components of TDP</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#design_tokens_of_fcc_projects">Design tokens of FCC projects</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#tribute_page">Tribute Page</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#survey_form">Survey form</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#product_landing_page">Product landing page</a>
+			<a class="gl gl-nav-link nav-link" tabindex="5" href="#personal_portifolio_webpage">Personal portifolio webpage</a>
 		</div>
 	</nav>
 	<div class="gl gl-toggle-menu">
@@ -107,15 +113,16 @@
 			<h1 class="gl">Technical Documentation Page (Guideline)</h1>
 			<div class="gl-column-content" style="--column-quantity-custom: auto; --column-width-custom: 30ch;">
 				<p class="gl">
-					This is a project exercise from <a href="https://www.freecodecamp.org" target="_blank"
+					This is a project exercise from <a class="gl" href="https://www.freecodecamp.org" target="_blank"
 					rel="noopener">freeCodeCamp</a> to get the certification to <a
 					href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank" rel="noopener">Responsive Web
-					Design</a>, <a id="tribute-link"
+					Design</a>, <a class="gl" id="tribute-link"
 					href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page"
 					target="_blank" rel="noopener">Build a Technical Documentation Page</a>.
 				</p>
 			</div>
 		</div>
+		<hr class="gl">
 		<section class="gl-main-section main-section" id="A">
 			<header class="gl">
 				<h2 class="gl-wrapper-content">
@@ -415,36 +422,46 @@
 <!-- -->
 					<hr class="gl">
 					<h3 class="gl">General Design Tokens</h3>
+					<p class="gl">This tokens control general aspects of <abbr title="Technical Documentation Page">TDP</abbr> components.</p>
 					<!-- -->
-					<pre class="gl gl-css" contenteditable="true" style="--gl-start-line-at: 38;"><code class="gl gl-custom-scroll" contenteditable="false">
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-text-color</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+					<pre class="gl gl-css" contenteditable="true" style="--gl-start-line-at: 52;"><code class="gl gl-custom-scroll" contenteditable="false">
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-text</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-color-text-decoration</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-05</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-02</span>);
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage-color</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage</span>: <span class="gl-function">linear-gradient</span>(
-<span class="gl gl-line-number"></span>  	<span class="gl-value">45deg</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>) <span class="gl-value">25%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-value">transparent 25%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-value">transparent 75%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>) <span class="gl-value">75%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>)
-<span class="gl gl-line-number"></span>  ),
-<span class="gl gl-line-number"></span>  <span class="gl-function">linear-gradient</span>(
-<span class="gl gl-line-number"></span>  	<span class="gl-value">45deg</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>) <span class="gl-value">25%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-value">transparent 25%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-value">transparent 75%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>) <span class="gl-value">75%</span>,
-<span class="gl gl-line-number"></span>  	<span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage-color</span>)
-<span class="gl gl-line-number"></span>  );
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage</span>: var(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-stage-texture</span>: <span class="gl-function">linear-gradient</span>(
+<span class="gl gl-line-number"></span>    <span class="gl-value">45deg</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>)
+<span class="gl gl-line-number"></span>   ),
+<span class="gl gl-line-number"></span>   <span class="gl-function">linear-gradient</span>(
+<span class="gl gl-line-number"></span>    <span class="gl-value">45deg</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">25%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-value">transparent</span> <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>) <span class="gl-value">75%</span>,
+<span class="gl gl-line-number"></span>    <span class="gl-function">var</span>(<span class="gl-var">--gl-background-stage</span>)
+<span class="gl gl-line-number"></span>   );
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-background-mark</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-text-font</span>: <span class="gl-value">Verdana</span>, <span class="gl-value">Geneva</span>, <span class="gl-value">Tahoma</span>, <span class="gl-value">sans-serif</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-code-font</span>: <span class="gl-string">'Courier New'</span>, <span class="gl-value">Courier</span>, <span class="gl-value">monospace</span>;
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-font-size-small</span>: 14px;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-title-base-font-size</span>: <span class="gl-value">18px</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-border</span>: <span class="gl-value">solid</span> <span class="gl-function">var</span>(<span class="gl-var">--gl-border-size</span>) <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-gutter</span>: <span class="gl-value">10px</span>;
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-shadow</span>: <span class="gl-value">1px</span> <span class="gl-value">1px</span> <span class="gl-value">0</span> <span class="gl-value">1px</span> <span class="gl-function">rgba</span>(<span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0.75</span>);
-<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-transition</span>: <span class="gl-value">0.3s</span> <span class="gl-function">ease</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-border-size</span>: <span class="gl-value">5px</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-menu-width</span>: <span class="gl-value">300px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-gutter</span>: <span class="gl-value">10px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-shadow</span>: <span class="gl-value">1px</span> <span class="gl-value">1px</span> <span class="gl-value">0</span> <span class="gl-value">1px</span> <span class="gl-function">rgba</span>(<span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0</span>, <span class="gl-value">0.75</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-transition</span>: <span class="gl-value">0.3s</span> <span class="gl-value">ease</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-comment">/* Custom scroll */</span>
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-thumb-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-03</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-thumb-background-hover</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-04</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-background</span>: <span class="gl-function">var</span>(<span class="gl-var">--gl-colors-01</span>);
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-width-firefox</span>: <span class="gl-value">thin</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-var">--gl-scroll-bar-width-chromium</span>: <span class="gl-value">8px</span>;
+<span class="gl gl-line-number"></span>  <span class="gl-comment">/* Z-index */</span>
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-behind</span>: <span class="gl-value">1</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-content</span>: <span class="gl-value">5</span>;
 <span class="gl gl-line-number"></span>  <span class="gl-var">--gl-above</span>: <span class="gl-value">10</span>;
@@ -452,6 +469,78 @@
 
 </code></pre>
 <!-- -->
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="components_of_tdp">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#components_of_tdp">Components of <abbr class="gl" title="Technical Documentation Page">TDP</abbr></a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="design_tokens_of_fcc_projects">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#design_tokens_of_fcc_projects">Design tokens of <abbr title="freeCodeCamp" class="gl">FCC</abbr> projects</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="tribute_page">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#tribute_page">Tribute Page</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="survey_form">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#survey_form">Survey form</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="product_landing_page">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#product_landing_page">Product landing page</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
+				</div>
+			</div>
+		</section>
+		<section class="gl-main-section main-section" id="personal_portifolio_webpage">
+			<header class="gl">
+				<h2 class="gl-wrapper-content">
+					<a class="gl" href="#personal_portifolio_webpage">Personal portifolio webpage</a>
+				</h2>
+			</header>
+			<div class="gl-holder-content">
+				<div class="gl-wrapper-content">
+					...
 				</div>
 			</div>
 		</section>

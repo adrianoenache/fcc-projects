@@ -15,6 +15,25 @@ button.gl,
   outline: 0;
 }
 
+a.gl {
+  color: var(--gl-color-text);
+}
+
+a.gl:focus {
+  outline: 0;
+}
+
+a.gl:hover,
+a.gl:focus,
+a.gl:visited,
+a.gl:visited:hover,
+a.gl:visited:focus,
+a.gl:active,
+a.gl:active:hover,
+a.gl:active:focus {
+  color: var(--gl-color-text-decoration);
+}
+
 h1.gl, h2.gl, h3.gl, h4.gl, h5.gl, h6.gl {
   font-weight: 700;
   line-height: 1.25em;
