@@ -135,9 +135,13 @@ hr.gl {
   background-color: var(--gl-background);
   border-bottom: var(--gl-border);
   color: var(--gl-color-text);
-  font-size: 20px;
+  font-size: var(--gl-menu-title-font-size);
+  height: 100%;
+  line-height: 1em;
   margin: 0;
-  padding: calc(var(--gl-gutter) * 2) var(--gl-gutter) var(--gl-gutter);
+  max-height: var(--gl-menu-title-box-size);
+  overflow: hidden;
+  padding: var(--gl-gutter);
 }
 
 .gl-stage {

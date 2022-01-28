@@ -78,9 +78,10 @@
 .gl-menu-scroll {
   display: none;
   flex-direction: column;
-  height: calc(100% - 95px);
+  height: calc(100% - var(--gl-menu-title-box-size));
   overflow-x: hidden;
   overflow-y: auto;
+  padding-bottom: var(--gl-gutter);
 }
 
 .gl-nav-link {
