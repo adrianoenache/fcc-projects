@@ -96,5 +96,5 @@
 .gl-close-menu:hover + a,
 .gl-nav-link:focus,
 .gl-nav-link:hover {
-  color: var(--gl-colors-05);
+  color: var(--gl-color-text-decoration);
 }
