@@ -20,4 +20,10 @@
 
 This serve as a hub for my studies in the freeCodeCamp, where all projects are git submodules connected to here.
 
+To execute this, use the command below in the terminal.
+
+```bash
+python3 -m http.server 4000
+```
+
 **[LICENSE](LICENSE)**.
