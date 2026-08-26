@@ -6,24 +6,35 @@
     <meta name="description" content="A study hub for freeCodeCamp by Adriano Enache, documenting learning journey and sharing resources.">
     <title>freeCodeCamp study hub of Adriano Enache</title>
     <style>
+        :root {
+            --main-background-color: #222;
+            --main-font-family: 'Courier New', Courier, monospace;
+            --main-text-color: #0f0;
+            --title-color: #fff;
+            --link-color: #ccc;
+            --link-hover-color: #fff;
+            --link-decoration-color: #0f0;
+            --link-decoration-hover-color: #ccc;
+            --transition-config: .25s ease-out;
+        }
         body {
-            background-color: #222;
-            color: #0f0;
-            font-family:'Courier New', Courier, monospace;
+            background-color: var(--main-background-color);
+            color: var(--main-text-color);
+            font-family: var(--main-font-family);
             :is(h1, h2) {
-                color: #fff;
+                color: var(--title-color);
             }
             li:not(:last-child) {
                 margin-bottom: .25em;
             }
             a {
-                color: #ccc;
-                text-decoration-color: #0f0;
+                color: var(--link-color);
+                text-decoration-color: var(--link-decoration-color);
                 text-decoration-thickness: .2em;
-                transition: color .25s ease-out, text-decoration-color .25s ease-out;
+                transition: color var(--transition-config), text-decoration-color var(--transition-config);
                 &:hover {
-                    color: #fff;
-                    text-decoration-color: #ccc;
+                    color: var(--link-hover-color);
+                    text-decoration-color: var(--link-decoration-hover-color);
                 }
             }
         }
