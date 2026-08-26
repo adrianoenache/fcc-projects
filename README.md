@@ -1,4 +1,4 @@
-# [freeCodeCamp profile: Adriano Enache ](https://www.freecodecamp.org/adriano-enache)
+# [freeCodeCamp profile: Adriano Enache](https://www.freecodecamp.org/adriano-enache)
 
 ## Roadmap
 
